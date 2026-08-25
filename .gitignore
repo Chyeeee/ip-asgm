@@ -21,4 +21,5 @@ results/
 Thumbs.db
 dataset/
 .vscode/
+Fruits_Data/
 results/*.joblib
