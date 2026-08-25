@@ -19,3 +19,6 @@ results/
 # OS
 .DS_Store
 Thumbs.db
+dataset/
+.vscode/
+results/*.joblib
