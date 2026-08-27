@@ -1,0 +1,2 @@
+Colour_Space,Feature_Version,Final_Method,Basic_Avg_Accuracy,Enhanced_Avg_Accuracy,Basic_Avg_F1,Enhanced_Avg_F1,F1_Change_Percentage_Points,Accuracy_Change_Percentage_Points
+Lab,Enhanced,Enhanced Lab,0.5958193041526375,0.6390291806958474,0.5630708907153695,0.6203874828874829,5.731659217211337,4.320987654320985
