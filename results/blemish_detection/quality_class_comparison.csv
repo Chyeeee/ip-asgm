@@ -1,0 +1,1204 @@
+Image,Class,Fruit Pixels,Blemish Pixels,Blemish Percentage
+image_0.jpg,Class A,200135,64179,32.07
+image_1.jpg,Class A,227179,110167,48.49
+image_10.jpg,Class A,165062,46039,27.89
+image_100.jpg,Class A,183349,47843,26.09
+image_101.jpg,Class A,183303,47830,26.09
+image_102.jpg,Class A,183952,49603,26.97
+image_103.jpg,Class A,183876,49642,27.00
+image_104.jpg,Class A,173612,52631,30.32
+image_105.jpg,Class A,189847,67251,35.42
+image_106.jpg,Class A,184701,63960,34.63
+image_107.jpg,Class A,172849,35464,20.52
+image_108.jpg,Class A,188726,57358,30.39
+image_109.jpg,Class A,165418,49492,29.92
+image_11.jpg,Class A,157664,43305,27.47
+image_110.jpg,Class A,147702,40838,27.65
+image_111.jpg,Class A,140116,36106,25.77
+image_112.jpg,Class A,125328,33422,26.67
+image_113.jpg,Class A,120546,32167,26.68
+image_114.jpg,Class A,136406,23269,17.06
+image_115.jpg,Class A,124557,26827,21.54
+image_116.jpg,Class A,113379,18994,16.75
+image_117.jpg,Class A,117552,22353,19.02
+image_118.jpg,Class A,187939,37361,19.88
+image_119.jpg,Class A,164429,58858,35.80
+image_12.jpg,Class A,155103,42303,27.27
+image_120.jpg,Class A,156196,56094,35.91
+image_121.jpg,Class A,149522,37622,25.16
+image_122.jpg,Class A,157811,39130,24.80
+image_123.jpg,Class A,166155,52712,31.72
+image_124.jpg,Class A,157145,51820,32.98
+image_125.jpg,Class A,65973,7338,11.12
+image_126.jpg,Class A,117406,18702,15.93
+image_127.jpg,Class A,78118,12368,15.83
+image_128.jpg,Class A,163190,43605,26.72
+image_129.jpg,Class A,155009,39584,25.54
+image_13.jpg,Class A,158470,40523,25.57
+image_130.jpg,Class A,73723,19480,26.42
+image_131.jpg,Class A,201371,64601,32.08
+image_132.jpg,Class A,191348,64249,33.58
+image_133.jpg,Class A,191157,63536,33.24
+image_134.jpg,Class A,158873,61237,38.54
+image_135.jpg,Class A,207854,61164,29.43
+image_136.jpg,Class A,170511,48206,28.27
+image_137.jpg,Class A,161783,48466,29.96
+image_138.jpg,Class A,118354,20752,17.53
+image_139.jpg,Class A,121731,24965,20.51
+image_14.jpg,Class A,157121,50818,32.34
+image_140.jpg,Class A,109200,24680,22.60
+image_141.jpg,Class A,105670,23983,22.70
+image_142.jpg,Class A,91482,22807,24.93
+image_143.jpg,Class A,97567,26031,26.68
+image_144.jpg,Class A,119466,24664,20.65
+image_145.jpg,Class A,109789,21364,19.46
+image_146.jpg,Class A,113221,25166,22.23
+image_147.jpg,Class A,129652,20986,16.19
+image_148.jpg,Class A,123842,22557,18.21
+image_149.jpg,Class A,115277,18985,16.47
+image_15.jpg,Class A,155293,51379,33.09
+image_150.jpg,Class A,108833,20079,18.45
+image_151.jpg,Class A,123453,21986,17.81
+image_152.jpg,Class A,101582,33034,32.52
+image_153.jpg,Class A,113518,21887,19.28
+image_154.jpg,Class A,99714,24064,24.13
+image_155.jpg,Class A,143088,31816,22.24
+image_156.jpg,Class A,134439,34075,25.35
+image_157.jpg,Class A,130533,36534,27.99
+image_158.jpg,Class A,183347,44587,24.32
+image_159.jpg,Class A,170490,33439,19.61
+image_16.jpg,Class A,159153,29250,18.38
+image_160.jpg,Class A,168294,30228,17.96
+image_161.jpg,Class A,132338,28444,21.49
+image_162.jpg,Class A,113923,27943,24.53
+image_163.jpg,Class A,120237,28252,23.50
+image_164.jpg,Class A,121093,30225,24.96
+image_165.jpg,Class A,120198,28655,23.84
+image_166.jpg,Class A,179794,47005,26.14
+image_167.jpg,Class A,191362,61077,31.92
+image_168.jpg,Class A,210780,75828,35.97
+image_169.jpg,Class A,200291,70126,35.01
+image_17.jpg,Class A,143885,29572,20.55
+image_170.jpg,Class A,212524,70277,33.07
+image_171.jpg,Class A,212599,70639,33.23
+image_172.jpg,Class A,187065,89084,47.62
+image_173.jpg,Class A,178861,83003,46.41
+image_174.jpg,Class A,173169,61248,35.37
+image_175.jpg,Class A,115895,23045,19.88
+image_176.jpg,Class A,105068,21633,20.59
+image_177.jpg,Class A,124383,20626,16.58
+image_178.jpg,Class A,103527,21619,20.88
+image_179.jpg,Class A,95160,18977,19.94
+image_18.jpg,Class A,160429,26329,16.41
+image_180.jpg,Class A,129139,18728,14.50
+image_181.jpg,Class A,194483,53678,27.60
+image_182.jpg,Class A,205718,52584,25.56
+image_183.jpg,Class A,202634,50988,25.16
+image_184.jpg,Class A,198454,43959,22.15
+image_185.jpg,Class A,172435,40974,23.76
+image_186.jpg,Class A,136906,35806,26.15
+image_187.jpg,Class A,119757,30208,25.22
+image_188.jpg,Class A,122088,31083,25.46
+image_189.jpg,Class A,132024,56343,42.68
+image_19.jpg,Class A,149986,23736,15.83
+image_190.jpg,Class A,114712,24918,21.72
+image_191.jpg,Class A,91327,27986,30.64
+image_192.jpg,Class A,77226,22810,29.54
+image_193.jpg,Class A,79536,23981,30.15
+image_194.jpg,Class A,112779,37615,33.35
+image_195.jpg,Class A,103391,39521,38.22
+image_196.jpg,Class A,107654,31402,29.17
+image_197.jpg,Class A,95614,26756,27.98
+image_198.jpg,Class A,97610,28173,28.86
+image_199.jpg,Class A,99364,29034,29.22
+image_2.jpg,Class A,177719,41062,23.11
+image_20.jpg,Class A,145621,21357,14.67
+image_200.jpg,Class A,98285,28703,29.20
+image_201.jpg,Class A,123995,12783,10.31
+image_202.jpg,Class A,118424,7789,6.58
+image_203.jpg,Class A,147211,22736,15.44
+image_204.jpg,Class A,149571,23180,15.50
+image_205.jpg,Class A,77918,6348,8.15
+image_206.jpg,Class A,90037,3767,4.18
+image_207.jpg,Class A,79768,4123,5.17
+image_208.jpg,Class A,82678,3434,4.15
+image_209.jpg,Class A,77869,3257,4.18
+image_21.jpg,Class A,143197,19529,13.64
+image_210.jpg,Class A,90662,3767,4.15
+image_211.jpg,Class A,77773,9312,11.97
+image_212.jpg,Class A,192385,15712,8.17
+image_213.jpg,Class A,232235,13780,5.93
+image_214.jpg,Class A,197247,17283,8.76
+image_215.jpg,Class A,134380,13085,9.74
+image_216.jpg,Class A,139216,8629,6.20
+image_217.jpg,Class A,141943,8426,5.94
+image_218.jpg,Class A,169858,30199,17.78
+image_219.jpg,Class A,162533,18921,11.64
+image_22.jpg,Class A,142913,23665,16.56
+image_220.jpg,Class A,137627,12987,9.44
+image_221.jpg,Class A,171629,20033,11.67
+image_222.jpg,Class A,161672,11128,6.88
+image_223.jpg,Class A,75088,7941,10.58
+image_224.jpg,Class A,73667,7638,10.37
+image_225.jpg,Class A,131806,18298,13.88
+image_226.jpg,Class A,93782,16048,17.11
+image_227.jpg,Class A,91222,18064,19.80
+image_228.jpg,Class A,109244,15084,13.81
+image_229.jpg,Class A,144571,16986,11.75
+image_23.jpg,Class A,147674,34516,23.37
+image_230.jpg,Class A,138315,12917,9.34
+image_231.jpg,Class A,66751,5751,8.62
+image_232.jpg,Class A,81506,11702,14.36
+image_233.jpg,Class A,77860,8562,11.00
+image_234.jpg,Class A,77978,12647,16.22
+image_235.jpg,Class A,99807,11242,11.26
+image_236.jpg,Class A,102362,10912,10.66
+image_237.jpg,Class A,87019,26479,30.43
+image_238.jpg,Class A,82146,24086,29.32
+image_239.jpg,Class A,68139,17848,26.19
+image_24.jpg,Class A,160905,46954,29.18
+image_240.jpg,Class A,86159,21194,24.60
+image_241.jpg,Class A,58937,13883,23.56
+image_242.jpg,Class A,78185,8273,10.58
+image_243.jpg,Class A,68178,15064,22.10
+image_244.jpg,Class A,108213,19162,17.71
+image_245.jpg,Class A,82836,17093,20.63
+image_246.jpg,Class A,84656,10871,12.84
+image_247.jpg,Class A,89890,15101,16.80
+image_248.jpg,Class A,79323,19207,24.21
+image_249.jpg,Class A,77622,8889,11.45
+image_25.jpg,Class A,261456,71625,27.39
+image_250.jpg,Class A,75393,9335,12.38
+image_251.jpg,Class A,101671,10015,9.85
+image_252.jpg,Class A,82992,6734,8.11
+image_253.jpg,Class A,88899,18548,20.86
+image_254.jpg,Class A,79864,15045,18.84
+image_255.jpg,Class A,78881,14126,17.91
+image_256.jpg,Class A,90060,12407,13.78
+image_257.jpg,Class A,82589,10328,12.51
+image_258.jpg,Class A,89136,13946,15.65
+image_259.jpg,Class A,100823,28201,27.97
+image_26.jpg,Class A,261707,74479,28.46
+image_260.jpg,Class A,110135,21066,19.13
+image_261.jpg,Class A,80915,16296,20.14
+image_262.jpg,Class A,94970,31664,33.34
+image_263.jpg,Class A,90805,35806,39.43
+image_264.jpg,Class A,91106,25117,27.57
+image_265.jpg,Class A,88895,12343,13.88
+image_266.jpg,Class A,87096,23218,26.66
+image_267.jpg,Class A,122087,23525,19.27
+image_268.jpg,Class A,101366,17742,17.50
+image_269.jpg,Class A,98000,16464,16.80
+image_27.jpg,Class A,204473,41138,20.12
+image_270.jpg,Class A,82289,18458,22.43
+image_271.jpg,Class A,105970,11264,10.63
+image_272.jpg,Class A,91753,12993,14.16
+image_273.jpg,Class A,90259,5538,6.14
+image_274.jpg,Class A,83712,13028,15.56
+image_275.jpg,Class A,97844,21718,22.20
+image_276.jpg,Class A,96848,24857,25.67
+image_277.jpg,Class A,105284,13776,13.08
+image_278.jpg,Class A,77780,15533,19.97
+image_279.jpg,Class A,78686,18055,22.95
+image_28.jpg,Class A,200860,46190,23.00
+image_280.jpg,Class A,81153,7398,9.12
+image_281.jpg,Class A,85669,11229,13.11
+image_282.jpg,Class A,101701,16049,15.78
+image_283.jpg,Class A,85928,15276,17.78
+image_284.jpg,Class A,61151,5626,9.20
+image_285.jpg,Class A,89486,15733,17.58
+image_286.jpg,Class A,107952,14371,13.31
+image_287.jpg,Class A,85023,6071,7.14
+image_288.jpg,Class A,73180,13231,18.08
+image_289.jpg,Class A,69600,11909,17.11
+image_29.jpg,Class A,222784,40914,18.36
+image_290.jpg,Class A,99595,10493,10.54
+image_291.jpg,Class A,77875,8638,11.09
+image_292.jpg,Class A,94101,13235,14.06
+image_293.jpg,Class A,96934,17078,17.62
+image_294.jpg,Class A,91114,10197,11.19
+image_295.jpg,Class A,109115,12355,11.32
+image_296.jpg,Class A,130198,23131,17.77
+image_297.jpg,Class A,106749,11494,10.77
+image_298.jpg,Class A,84564,12732,15.06
+image_299.jpg,Class A,92890,10078,10.85
+image_3.jpg,Class A,194004,54537,28.11
+image_30.jpg,Class A,186789,42732,22.88
+image_300.jpg,Class A,97378,12326,12.66
+image_301.jpg,Class A,84067,13357,15.89
+image_302.jpg,Class A,89628,6795,7.58
+image_303.jpg,Class A,90287,12154,13.46
+image_304.jpg,Class A,88408,16769,18.97
+image_305.jpg,Class A,83556,10222,12.23
+image_306.jpg,Class A,99972,11464,11.47
+image_307.jpg,Class A,123222,14187,11.51
+image_308.jpg,Class A,141255,19357,13.70
+image_309.jpg,Class A,134761,10579,7.85
+image_31.jpg,Class A,138640,39325,28.36
+image_310.jpg,Class A,202093,14738,7.29
+image_311.jpg,Class A,133487,13710,10.27
+image_312.jpg,Class A,129636,13965,10.77
+image_313.jpg,Class A,148654,13166,8.86
+image_314.jpg,Class A,132792,16677,12.56
+image_315.jpg,Class A,112199,10846,9.67
+image_316.jpg,Class A,116357,13032,11.20
+image_317.jpg,Class A,122919,10853,8.83
+image_318.jpg,Class A,178762,17421,9.75
+image_319.jpg,Class A,122156,12404,10.15
+image_32.jpg,Class A,150434,43557,28.95
+image_320.jpg,Class A,114972,11381,9.90
+image_321.jpg,Class A,147465,18934,12.84
+image_322.jpg,Class A,134793,17798,13.20
+image_323.jpg,Class A,128938,21760,16.88
+image_324.jpg,Class A,124126,30755,24.78
+image_325.jpg,Class A,128556,10318,8.03
+image_326.jpg,Class A,133865,14130,10.56
+image_327.jpg,Class A,159793,19148,11.98
+image_328.jpg,Class A,118706,13033,10.98
+image_329.jpg,Class A,131899,19110,14.49
+image_33.jpg,Class A,151274,43919,29.03
+image_330.jpg,Class A,133498,24030,18.00
+image_331.jpg,Class A,136145,22618,16.61
+image_332.jpg,Class A,130762,16173,12.37
+image_333.jpg,Class A,142922,19144,13.39
+image_334.jpg,Class A,128234,15213,11.86
+image_335.jpg,Class A,130187,7485,5.75
+image_336.jpg,Class A,131309,15942,12.14
+image_337.jpg,Class A,144293,13850,9.60
+image_338.jpg,Class A,146203,13855,9.48
+image_339.jpg,Class A,133398,12649,9.48
+image_34.jpg,Class A,151462,53233,35.15
+image_340.jpg,Class A,78807,15855,20.12
+image_341.jpg,Class A,201119,45171,22.46
+image_342.jpg,Class A,235861,35460,15.03
+image_343.jpg,Class A,179738,26365,14.67
+image_344.jpg,Class A,193257,26403,13.66
+image_345.jpg,Class A,175846,21642,12.31
+image_346.jpg,Class A,210347,21483,10.21
+image_347.jpg,Class A,197717,19376,9.80
+image_348.jpg,Class A,167734,28451,16.96
+image_349.jpg,Class A,215539,22607,10.49
+image_35.jpg,Class A,163652,55792,34.09
+image_350.jpg,Class A,219605,22016,10.03
+image_351.jpg,Class A,174688,17416,9.97
+image_352.jpg,Class A,66079,10574,16.00
+image_353.jpg,Class A,79019,13102,16.58
+image_354.jpg,Class A,105227,22212,21.11
+image_355.jpg,Class A,83323,24488,29.39
+image_356.jpg,Class A,78375,23371,29.82
+image_357.jpg,Class A,91949,25277,27.49
+image_358.jpg,Class A,84842,20443,24.10
+image_359.jpg,Class A,79341,15454,19.48
+image_36.jpg,Class A,195331,55005,28.16
+image_360.jpg,Class A,85610,14928,17.44
+image_361.jpg,Class A,102800,20738,20.17
+image_362.jpg,Class A,83521,18161,21.74
+image_363.jpg,Class A,64373,15158,23.55
+image_364.jpg,Class A,83619,28897,34.56
+image_365.jpg,Class A,93924,16350,17.41
+image_366.jpg,Class A,131431,24206,18.42
+image_367.jpg,Class A,127401,29655,23.28
+image_368.jpg,Class A,67451,10832,16.06
+image_369.jpg,Class A,83027,12078,14.55
+image_37.jpg,Class A,205583,59999,29.18
+image_370.jpg,Class A,95281,11456,12.02
+image_371.jpg,Class A,94564,19821,20.96
+image_372.jpg,Class A,79110,16486,20.84
+image_373.jpg,Class A,86172,23338,27.08
+image_374.jpg,Class A,91450,14187,15.51
+image_375.jpg,Class A,69502,21040,30.27
+image_376.jpg,Class A,66060,14522,21.98
+image_377.jpg,Class A,95476,25011,26.20
+image_378.jpg,Class A,92776,26243,28.29
+image_379.jpg,Class A,80141,14045,17.53
+image_38.jpg,Class A,159878,44414,27.78
+image_380.jpg,Class A,88385,20385,23.06
+image_381.jpg,Class A,60422,16021,26.52
+image_382.jpg,Class A,83538,20966,25.10
+image_383.jpg,Class A,84639,20818,24.60
+image_384.jpg,Class A,73324,15509,21.15
+image_385.jpg,Class A,78472,15091,19.23
+image_386.jpg,Class A,82135,19254,23.44
+image_387.jpg,Class A,87631,29791,34.00
+image_388.jpg,Class A,100090,31508,31.48
+image_389.jpg,Class A,91382,27556,30.15
+image_39.jpg,Class A,162426,46267,28.48
+image_390.jpg,Class A,112972,33101,29.30
+image_391.jpg,Class A,116264,23173,19.93
+image_392.jpg,Class A,87969,23873,27.14
+image_393.jpg,Class A,86645,23871,27.55
+image_394.jpg,Class A,98430,21086,21.42
+image_395.jpg,Class A,83053,26675,32.12
+image_396.jpg,Class A,87256,23679,27.14
+image_397.jpg,Class A,87989,22516,25.59
+image_398.jpg,Class A,101462,20020,19.73
+image_399.jpg,Class A,93118,22489,24.15
+image_4.jpg,Class A,186435,53887,28.90
+image_40.jpg,Class A,159875,45226,28.29
+image_400.jpg,Class A,79372,8046,10.14
+image_401.jpg,Class A,74372,12025,16.17
+image_402.jpg,Class A,65572,7288,11.11
+image_403.jpg,Class A,89527,19591,21.88
+image_404.jpg,Class A,91224,19852,21.76
+image_405.jpg,Class A,92829,17091,18.41
+image_406.jpg,Class A,96914,26712,27.56
+image_407.jpg,Class A,64606,17630,27.29
+image_408.jpg,Class A,98421,26644,27.07
+image_409.jpg,Class A,78047,18769,24.05
+image_41.jpg,Class A,187787,48446,25.80
+image_410.jpg,Class A,60889,18226,29.93
+image_411.jpg,Class A,84420,19610,23.23
+image_412.jpg,Class A,104146,20418,19.61
+image_413.jpg,Class A,143912,29957,20.82
+image_414.jpg,Class A,123254,35333,28.67
+image_415.jpg,Class A,142406,41295,29.00
+image_416.jpg,Class A,104512,29749,28.46
+image_417.jpg,Class A,114047,33399,29.29
+image_418.jpg,Class A,102617,30806,30.02
+image_419.jpg,Class A,138202,28491,20.62
+image_42.jpg,Class A,132639,36157,27.26
+image_420.jpg,Class A,142834,27395,19.18
+image_421.jpg,Class A,133403,29931,22.44
+image_422.jpg,Class A,156894,47895,30.53
+image_423.jpg,Class A,128747,24509,19.04
+image_424.jpg,Class A,93106,35132,37.73
+image_425.jpg,Class A,142876,28672,20.07
+image_426.jpg,Class A,167995,25515,15.19
+image_427.jpg,Class A,132204,29575,22.37
+image_428.jpg,Class A,116469,27904,23.96
+image_429.jpg,Class A,148217,39063,26.36
+image_43.jpg,Class A,233214,64453,27.64
+image_430.jpg,Class A,132704,29235,22.03
+image_431.jpg,Class A,128031,31471,24.58
+image_432.jpg,Class A,112433,25840,22.98
+image_433.jpg,Class A,130491,41480,31.79
+image_434.jpg,Class A,131986,24550,18.60
+image_435.jpg,Class A,143371,22152,15.45
+image_436.jpg,Class A,144410,33311,23.07
+image_437.jpg,Class A,136183,49365,36.25
+image_438.jpg,Class A,107619,23665,21.99
+image_439.jpg,Class A,129891,42261,32.54
+image_44.jpg,Class A,123925,29187,23.55
+image_440.jpg,Class A,125915,37463,29.75
+image_441.jpg,Class A,159027,42764,26.89
+image_442.jpg,Class A,112233,40742,36.30
+image_443.jpg,Class A,130404,31153,23.89
+image_444.jpg,Class A,155986,36837,23.62
+image_445.jpg,Class A,141150,36222,25.66
+image_446.jpg,Class A,151418,35134,23.20
+image_447.jpg,Class A,143619,40640,28.30
+image_448.jpg,Class A,132945,28498,21.44
+image_449.jpg,Class A,132988,25996,19.55
+image_45.jpg,Class A,233603,59468,25.46
+image_450.jpg,Class A,159330,36376,22.83
+image_451.jpg,Class A,124372,24029,19.32
+image_452.jpg,Class A,157776,38752,24.56
+image_453.jpg,Class A,116092,24110,20.77
+image_454.jpg,Class A,132575,46750,35.26
+image_455.jpg,Class A,125842,29138,23.15
+image_456.jpg,Class A,163170,39981,24.50
+image_457.jpg,Class A,183380,66817,36.44
+image_458.jpg,Class A,187393,71097,37.94
+image_459.jpg,Class A,131421,38113,29.00
+image_46.jpg,Class A,211155,58253,27.59
+image_460.jpg,Class A,152963,34832,22.77
+image_461.jpg,Class A,145412,46040,31.66
+image_462.jpg,Class A,190120,72572,38.17
+image_463.jpg,Class A,150853,50007,33.15
+image_464.jpg,Class A,168767,51825,30.71
+image_465.jpg,Class A,167302,54707,32.70
+image_466.jpg,Class A,135536,33779,24.92
+image_467.jpg,Class A,131087,30776,23.48
+image_468.jpg,Class A,129196,31697,24.53
+image_469.jpg,Class A,121028,30757,25.41
+image_47.jpg,Class A,136945,31256,22.82
+image_470.jpg,Class A,158162,42071,26.60
+image_471.jpg,Class A,130001,33678,25.91
+image_472.jpg,Class A,139701,30902,22.12
+image_473.jpg,Class A,167758,44840,26.73
+image_474.jpg,Class A,150793,12717,8.43
+image_475.jpg,Class A,178400,19196,10.76
+image_476.jpg,Class A,150360,19239,12.80
+image_477.jpg,Class A,140137,17934,12.80
+image_478.jpg,Class A,133285,15677,11.76
+image_479.jpg,Class A,169448,28525,16.83
+image_48.jpg,Class A,154441,36686,23.75
+image_480.jpg,Class A,159375,24044,15.09
+image_481.jpg,Class A,157130,22046,14.03
+image_482.jpg,Class A,137969,12529,9.08
+image_483.jpg,Class A,115824,11658,10.07
+image_484.jpg,Class A,128052,16009,12.50
+image_485.jpg,Class A,156871,14582,9.30
+image_486.jpg,Class A,165096,14729,8.92
+image_487.jpg,Class A,123263,15958,12.95
+image_488.jpg,Class A,132216,9699,7.34
+image_489.jpg,Class A,130234,12152,9.33
+image_49.jpg,Class A,155106,44647,28.78
+image_490.jpg,Class A,151085,18123,12.00
+image_491.jpg,Class A,146009,12352,8.46
+image_492.jpg,Class A,127282,15862,12.46
+image_493.jpg,Class A,139577,15716,11.26
+image_494.jpg,Class A,170978,18204,10.65
+image_495.jpg,Class A,160727,25376,15.79
+image_496.jpg,Class A,123492,18168,14.71
+image_497.jpg,Class A,161785,21840,13.50
+image_498.jpg,Class A,120850,12561,10.39
+image_499.jpg,Class A,128644,14636,11.38
+image_5.jpg,Class A,187569,54892,29.26
+image_50.jpg,Class A,180820,41217,22.79
+image_500.jpg,Class A,139456,19415,13.92
+image_501.jpg,Class A,153049,24897,16.27
+image_502.jpg,Class A,139581,23303,16.69
+image_503.jpg,Class A,149916,21097,14.07
+image_504.jpg,Class A,124610,27831,22.33
+image_505.jpg,Class A,116430,12514,10.75
+image_506.jpg,Class A,124724,9162,7.35
+image_507.jpg,Class A,149503,17025,11.39
+image_508.jpg,Class A,123560,20705,16.76
+image_509.jpg,Class A,167801,18181,10.83
+image_51.jpg,Class A,184745,54208,29.34
+image_52.jpg,Class A,197351,41412,20.98
+image_53.jpg,Class A,263115,97816,37.18
+image_54.jpg,Class A,188608,64207,34.04
+image_55.jpg,Class A,217734,109486,50.28
+image_56.jpg,Class A,185056,39615,21.41
+image_57.jpg,Class A,169901,34759,20.46
+image_58.jpg,Class A,161981,34708,21.43
+image_59.jpg,Class A,153444,37032,24.13
+image_6.jpg,Class A,182173,58078,31.88
+image_60.jpg,Class A,162450,37963,23.37
+image_61.jpg,Class A,131302,26287,20.02
+image_62.jpg,Class A,197546,45015,22.79
+image_63.jpg,Class A,199881,45625,22.83
+image_64.jpg,Class A,169462,44598,26.32
+image_65.jpg,Class A,210983,55546,26.33
+image_66.jpg,Class A,172437,43864,25.44
+image_67.jpg,Class A,169857,42489,25.01
+image_68.jpg,Class A,152902,32661,21.36
+image_69.jpg,Class A,182689,49683,27.20
+image_7.jpg,Class A,179244,57844,32.27
+image_70.jpg,Class A,179231,44463,24.81
+image_71.jpg,Class A,140411,34951,24.89
+image_72.jpg,Class A,158073,26319,16.65
+image_73.jpg,Class A,206401,41270,20.00
+image_74.jpg,Class A,208579,33804,16.21
+image_75.jpg,Class A,206701,26079,12.62
+image_76.jpg,Class A,220470,29347,13.31
+image_77.jpg,Class A,212799,31421,14.77
+image_78.jpg,Class A,200129,22719,11.35
+image_79.jpg,Class A,212356,20663,9.73
+image_8.jpg,Class A,176185,56747,32.21
+image_80.jpg,Class A,209247,20552,9.82
+image_81.jpg,Class A,184700,27038,14.64
+image_82.jpg,Class A,208153,42803,20.56
+image_83.jpg,Class A,196296,35001,17.83
+image_84.jpg,Class A,185456,42932,23.15
+image_85.jpg,Class A,172766,37468,21.69
+image_86.jpg,Class A,172003,39254,22.82
+image_87.jpg,Class A,147236,26134,17.75
+image_88.jpg,Class A,183971,47956,26.07
+image_89.jpg,Class A,201371,54947,27.29
+image_9.jpg,Class A,193817,64424,33.24
+image_90.jpg,Class A,244511,64982,26.58
+image_91.jpg,Class A,198859,78319,39.38
+image_92.jpg,Class A,229865,86305,37.55
+image_93.jpg,Class A,207729,81422,39.20
+image_94.jpg,Class A,194358,65493,33.70
+image_95.jpg,Class A,205667,77940,37.90
+image_96.jpg,Class A,187717,72778,38.77
+image_97.jpg,Class A,182886,66746,36.50
+image_98.jpg,Class A,240063,107921,44.96
+image_99.jpg,Class A,174021,54970,31.59
+image_0.jpg,Class B,193295,51927,26.86
+image_1.jpg,Class B,207695,61656,29.69
+image_10.jpg,Class B,166728,50517,30.30
+image_100.jpg,Class B,187764,60586,32.27
+image_101.jpg,Class B,180635,62430,34.56
+image_102.jpg,Class B,167800,30110,17.94
+image_103.jpg,Class B,163439,43044,26.34
+image_104.jpg,Class B,227727,81069,35.60
+image_105.jpg,Class B,195831,40414,20.64
+image_106.jpg,Class B,209062,46976,22.47
+image_107.jpg,Class B,204218,62830,30.77
+image_108.jpg,Class B,195031,57929,29.70
+image_109.jpg,Class B,187439,56872,30.34
+image_11.jpg,Class B,167203,62621,37.45
+image_110.jpg,Class B,190123,43824,23.05
+image_111.jpg,Class B,221846,62503,28.17
+image_112.jpg,Class B,222475,49922,22.44
+image_113.jpg,Class B,211521,47677,22.54
+image_114.jpg,Class B,224639,80792,35.97
+image_115.jpg,Class B,227861,82025,36.00
+image_116.jpg,Class B,226401,72936,32.22
+image_117.jpg,Class B,229625,82297,35.84
+image_118.jpg,Class B,165412,47784,28.89
+image_119.jpg,Class B,157348,63697,40.48
+image_12.jpg,Class B,264412,68720,25.99
+image_120.jpg,Class B,162464,62418,38.42
+image_121.jpg,Class B,159004,44312,27.87
+image_122.jpg,Class B,160335,43860,27.36
+image_123.jpg,Class B,192919,76682,39.75
+image_124.jpg,Class B,189511,46360,24.46
+image_125.jpg,Class B,189902,65405,34.44
+image_126.jpg,Class B,185542,62420,33.64
+image_127.jpg,Class B,181665,39100,21.52
+image_128.jpg,Class B,183571,41146,22.41
+image_129.jpg,Class B,178589,34325,19.22
+image_13.jpg,Class B,255765,56481,22.08
+image_130.jpg,Class B,181461,47548,26.20
+image_131.jpg,Class B,183356,43880,23.93
+image_132.jpg,Class B,172211,28504,16.55
+image_133.jpg,Class B,174261,41260,23.68
+image_134.jpg,Class B,171779,26489,15.42
+image_135.jpg,Class B,157140,31143,19.82
+image_136.jpg,Class B,154069,29618,19.22
+image_137.jpg,Class B,72996,28193,38.62
+image_138.jpg,Class B,100632,37113,36.88
+image_139.jpg,Class B,89639,23250,25.94
+image_14.jpg,Class B,239978,75839,31.60
+image_140.jpg,Class B,121054,37116,30.66
+image_141.jpg,Class B,115117,46564,40.45
+image_142.jpg,Class B,111494,25796,23.14
+image_143.jpg,Class B,107897,24161,22.39
+image_144.jpg,Class B,111737,29060,26.01
+image_145.jpg,Class B,96430,25992,26.95
+image_146.jpg,Class B,95256,24215,25.42
+image_147.jpg,Class B,121567,30607,25.18
+image_148.jpg,Class B,115899,23368,20.16
+image_149.jpg,Class B,123768,25718,20.78
+image_15.jpg,Class B,170530,52517,30.80
+image_150.jpg,Class B,99726,27892,27.97
+image_151.jpg,Class B,108787,29497,27.11
+image_152.jpg,Class B,81775,21553,26.36
+image_153.jpg,Class B,103584,29877,28.84
+image_154.jpg,Class B,105961,19152,18.07
+image_155.jpg,Class B,129956,34574,26.60
+image_156.jpg,Class B,95579,22559,23.60
+image_157.jpg,Class B,105718,31098,29.42
+image_158.jpg,Class B,95578,31777,33.25
+image_159.jpg,Class B,100978,25134,24.89
+image_16.jpg,Class B,194639,69669,35.79
+image_160.jpg,Class B,100499,22318,22.21
+image_161.jpg,Class B,88797,19498,21.96
+image_162.jpg,Class B,104065,38565,37.06
+image_163.jpg,Class B,100829,27563,27.34
+image_164.jpg,Class B,102696,22454,21.86
+image_165.jpg,Class B,117748,25785,21.90
+image_166.jpg,Class B,88023,22478,25.54
+image_167.jpg,Class B,114275,17702,15.49
+image_168.jpg,Class B,129172,37766,29.24
+image_169.jpg,Class B,108494,31327,28.87
+image_17.jpg,Class B,190793,68500,35.90
+image_170.jpg,Class B,114114,29479,25.83
+image_171.jpg,Class B,112950,30906,27.36
+image_172.jpg,Class B,133109,30941,23.24
+image_173.jpg,Class B,122832,20934,17.04
+image_174.jpg,Class B,114801,20969,18.27
+image_175.jpg,Class B,106251,32314,30.41
+image_176.jpg,Class B,89595,14433,16.11
+image_177.jpg,Class B,103932,15227,14.65
+image_178.jpg,Class B,99850,21917,21.95
+image_179.jpg,Class B,83051,20797,25.04
+image_18.jpg,Class B,190180,64706,34.02
+image_180.jpg,Class B,97825,19530,19.96
+image_181.jpg,Class B,90018,13582,15.09
+image_182.jpg,Class B,92393,28337,30.67
+image_183.jpg,Class B,86225,16458,19.09
+image_184.jpg,Class B,89652,14910,16.63
+image_185.jpg,Class B,94401,30589,32.40
+image_186.jpg,Class B,101876,17251,16.93
+image_187.jpg,Class B,105380,22237,21.10
+image_188.jpg,Class B,105799,21472,20.30
+image_189.jpg,Class B,112718,31866,28.27
+image_19.jpg,Class B,183971,47956,26.07
+image_190.jpg,Class B,107636,23326,21.67
+image_191.jpg,Class B,92829,36653,39.48
+image_192.jpg,Class B,93326,23342,25.01
+image_193.jpg,Class B,96040,24398,25.40
+image_194.jpg,Class B,108695,20770,19.11
+image_195.jpg,Class B,96311,28835,29.94
+image_196.jpg,Class B,127024,41421,32.61
+image_197.jpg,Class B,107440,25529,23.76
+image_198.jpg,Class B,94363,22120,23.44
+image_199.jpg,Class B,97909,35887,36.65
+image_2.jpg,Class B,226075,66663,29.49
+image_20.jpg,Class B,201371,54947,27.29
+image_200.jpg,Class B,96853,26068,26.92
+image_201.jpg,Class B,91711,21312,23.24
+image_202.jpg,Class B,99018,21520,21.73
+image_203.jpg,Class B,117628,31086,26.43
+image_204.jpg,Class B,148663,30600,20.58
+image_205.jpg,Class B,152282,36217,23.78
+image_206.jpg,Class B,167628,55336,33.01
+image_207.jpg,Class B,187843,58869,31.34
+image_208.jpg,Class B,156716,31786,20.28
+image_209.jpg,Class B,155576,44438,28.56
+image_21.jpg,Class B,244511,64982,26.58
+image_210.jpg,Class B,162026,24848,15.34
+image_211.jpg,Class B,153434,32289,21.04
+image_212.jpg,Class B,152428,38885,25.51
+image_213.jpg,Class B,158210,39333,24.86
+image_214.jpg,Class B,134777,24374,18.08
+image_215.jpg,Class B,121417,30191,24.87
+image_216.jpg,Class B,162832,39845,24.47
+image_217.jpg,Class B,153700,25887,16.84
+image_218.jpg,Class B,171345,39113,22.83
+image_219.jpg,Class B,134680,22927,17.02
+image_22.jpg,Class B,240248,87540,36.44
+image_220.jpg,Class B,134044,21449,16.00
+image_221.jpg,Class B,154708,26703,17.26
+image_222.jpg,Class B,172355,35180,20.41
+image_223.jpg,Class B,152352,22509,14.77
+image_224.jpg,Class B,188984,23405,12.38
+image_225.jpg,Class B,166171,34788,20.94
+image_226.jpg,Class B,161403,35476,21.98
+image_227.jpg,Class B,183269,30941,16.88
+image_228.jpg,Class B,188546,31612,16.77
+image_229.jpg,Class B,140489,19315,13.75
+image_23.jpg,Class B,263503,73873,28.03
+image_230.jpg,Class B,151111,24032,15.90
+image_231.jpg,Class B,171328,35869,20.94
+image_232.jpg,Class B,148282,24842,16.75
+image_233.jpg,Class B,145873,20980,14.38
+image_234.jpg,Class B,141551,24463,17.28
+image_235.jpg,Class B,140504,32040,22.80
+image_236.jpg,Class B,144787,23747,16.40
+image_237.jpg,Class B,159289,23902,15.01
+image_238.jpg,Class B,148187,26880,18.14
+image_239.jpg,Class B,140560,36272,25.81
+image_24.jpg,Class B,272252,72442,26.61
+image_240.jpg,Class B,139627,24424,17.49
+image_241.jpg,Class B,166110,27690,16.67
+image_242.jpg,Class B,163454,46983,28.74
+image_243.jpg,Class B,135307,32217,23.81
+image_244.jpg,Class B,134115,24617,18.36
+image_245.jpg,Class B,158570,23372,14.74
+image_246.jpg,Class B,138403,26060,18.83
+image_247.jpg,Class B,164532,29093,17.68
+image_248.jpg,Class B,148926,21885,14.70
+image_249.jpg,Class B,161576,34958,21.64
+image_25.jpg,Class B,270236,74365,27.52
+image_250.jpg,Class B,185751,30808,16.59
+image_251.jpg,Class B,174925,29221,16.70
+image_252.jpg,Class B,177733,37808,21.27
+image_253.jpg,Class B,174658,35266,20.19
+image_254.jpg,Class B,174068,41390,23.78
+image_255.jpg,Class B,146116,34023,23.28
+image_256.jpg,Class B,156450,43160,27.59
+image_257.jpg,Class B,148045,42439,28.67
+image_258.jpg,Class B,170411,34140,20.03
+image_259.jpg,Class B,172583,40958,23.73
+image_26.jpg,Class B,255228,97846,38.34
+image_260.jpg,Class B,188431,34125,18.11
+image_261.jpg,Class B,157543,30187,19.16
+image_262.jpg,Class B,135071,32136,23.79
+image_263.jpg,Class B,151551,25617,16.90
+image_264.jpg,Class B,167751,25858,15.41
+image_265.jpg,Class B,154820,25783,16.65
+image_266.jpg,Class B,187269,37160,19.84
+image_267.jpg,Class B,191031,30225,15.82
+image_268.jpg,Class B,186072,39587,21.28
+image_269.jpg,Class B,217125,40076,18.46
+image_27.jpg,Class B,198859,78319,39.38
+image_270.jpg,Class B,193216,40778,21.10
+image_271.jpg,Class B,190924,38046,19.93
+image_272.jpg,Class B,159233,30673,19.26
+image_273.jpg,Class B,192787,35669,18.50
+image_274.jpg,Class B,209408,38116,18.20
+image_275.jpg,Class B,188637,26673,14.14
+image_276.jpg,Class B,184079,24869,13.51
+image_277.jpg,Class B,186900,28393,15.19
+image_278.jpg,Class B,188811,36363,19.26
+image_279.jpg,Class B,174617,32837,18.81
+image_28.jpg,Class B,229865,86305,37.55
+image_280.jpg,Class B,169873,32842,19.33
+image_281.jpg,Class B,152482,30229,19.82
+image_282.jpg,Class B,178414,39878,22.35
+image_283.jpg,Class B,164478,39442,23.98
+image_284.jpg,Class B,197968,52779,26.66
+image_285.jpg,Class B,183237,35330,19.28
+image_286.jpg,Class B,170785,39631,23.21
+image_287.jpg,Class B,166589,31804,19.09
+image_288.jpg,Class B,142419,29034,20.39
+image_289.jpg,Class B,134807,23897,17.73
+image_29.jpg,Class B,207729,81422,39.20
+image_3.jpg,Class B,229505,59774,26.04
+image_30.jpg,Class B,194358,65493,33.70
+image_31.jpg,Class B,205667,77940,37.90
+image_32.jpg,Class B,187717,72778,38.77
+image_33.jpg,Class B,182886,66746,36.50
+image_34.jpg,Class B,240049,108020,45.00
+image_35.jpg,Class B,173990,55008,31.62
+image_36.jpg,Class B,172767,58629,33.94
+image_37.jpg,Class B,188588,63993,33.93
+image_38.jpg,Class B,189117,65285,34.52
+image_39.jpg,Class B,183303,47830,26.09
+image_4.jpg,Class B,210357,53744,25.55
+image_40.jpg,Class B,183876,49642,27.00
+image_41.jpg,Class B,173612,52631,30.32
+image_42.jpg,Class B,189847,67251,35.42
+image_43.jpg,Class B,184701,63960,34.63
+image_44.jpg,Class B,185839,63702,34.28
+image_45.jpg,Class B,179359,61490,34.28
+image_46.jpg,Class B,144750,63079,43.58
+image_47.jpg,Class B,146099,62947,43.09
+image_48.jpg,Class B,144258,61468,42.61
+image_49.jpg,Class B,143882,60342,41.94
+image_5.jpg,Class B,187872,48695,25.92
+image_50.jpg,Class B,161740,62309,38.52
+image_51.jpg,Class B,169500,63176,37.27
+image_52.jpg,Class B,171287,63255,36.93
+image_53.jpg,Class B,183366,55706,30.38
+image_54.jpg,Class B,182503,54815,30.04
+image_55.jpg,Class B,181430,54718,30.16
+image_56.jpg,Class B,179332,54017,30.12
+image_57.jpg,Class B,178543,53654,30.05
+image_58.jpg,Class B,187841,58069,30.91
+image_59.jpg,Class B,188764,53336,28.26
+image_6.jpg,Class B,188325,46618,24.75
+image_60.jpg,Class B,195586,66843,34.18
+image_61.jpg,Class B,175129,49416,28.22
+image_62.jpg,Class B,217395,72301,33.26
+image_63.jpg,Class B,215416,68544,31.82
+image_64.jpg,Class B,208251,62083,29.81
+image_65.jpg,Class B,190298,59815,31.43
+image_66.jpg,Class B,173932,61649,35.44
+image_67.jpg,Class B,180083,64953,36.07
+image_68.jpg,Class B,182107,50797,27.89
+image_69.jpg,Class B,239365,65785,27.48
+image_7.jpg,Class B,175707,49887,28.39
+image_70.jpg,Class B,163997,48273,29.44
+image_71.jpg,Class B,214776,69093,32.17
+image_72.jpg,Class B,190601,62321,32.70
+image_73.jpg,Class B,172479,59967,34.77
+image_74.jpg,Class B,179387,65626,36.58
+image_75.jpg,Class B,183137,61189,33.41
+image_76.jpg,Class B,173158,53861,31.11
+image_77.jpg,Class B,187964,60776,32.33
+image_78.jpg,Class B,183770,52125,28.36
+image_79.jpg,Class B,180672,61500,34.04
+image_8.jpg,Class B,164452,51918,31.57
+image_80.jpg,Class B,180459,64058,35.50
+image_81.jpg,Class B,177370,67668,38.15
+image_82.jpg,Class B,178361,54526,30.57
+image_83.jpg,Class B,190584,57013,29.91
+image_84.jpg,Class B,188739,52703,27.92
+image_85.jpg,Class B,203091,85930,42.31
+image_86.jpg,Class B,201885,56995,28.23
+image_87.jpg,Class B,231077,67092,29.03
+image_88.jpg,Class B,230794,91500,39.65
+image_89.jpg,Class B,234807,100164,42.66
+image_9.jpg,Class B,173577,52233,30.09
+image_90.jpg,Class B,165987,45919,27.66
+image_91.jpg,Class B,164782,46040,27.94
+image_92.jpg,Class B,173939,69286,39.83
+image_93.jpg,Class B,161847,54342,33.58
+image_94.jpg,Class B,161260,49034,30.41
+image_95.jpg,Class B,157235,51393,32.69
+image_96.jpg,Class B,159051,65337,41.08
+image_97.jpg,Class B,161294,50254,31.16
+image_98.jpg,Class B,180178,57481,31.90
+image_99.jpg,Class B,186825,80513,43.10
+image_0.jpg,Defect,173939,69286,39.83
+image_1.jpg,Defect,161847,54342,33.58
+image_10.jpg,Defect,227727,81069,35.60
+image_100.jpg,Defect,105774,38515,36.41
+image_101.jpg,Defect,93916,39153,41.69
+image_102.jpg,Defect,85238,31810,37.32
+image_103.jpg,Defect,104155,39607,38.03
+image_104.jpg,Defect,106862,43973,41.15
+image_105.jpg,Defect,97089,39336,40.52
+image_106.jpg,Defect,94758,36927,38.97
+image_107.jpg,Defect,106578,44058,41.34
+image_108.jpg,Defect,117815,48592,41.24
+image_109.jpg,Defect,109954,43337,39.41
+image_11.jpg,Defect,187439,56872,30.34
+image_110.jpg,Defect,105677,39444,37.33
+image_111.jpg,Defect,104327,46207,44.29
+image_112.jpg,Defect,101176,37825,37.39
+image_113.jpg,Defect,111960,39726,35.48
+image_114.jpg,Defect,88742,38365,43.23
+image_115.jpg,Defect,104263,34914,33.49
+image_116.jpg,Defect,99198,27493,27.72
+image_117.jpg,Defect,145311,46880,32.26
+image_118.jpg,Defect,145061,48096,33.16
+image_119.jpg,Defect,145203,46465,32.00
+image_12.jpg,Defect,190123,43824,23.05
+image_120.jpg,Defect,122617,30139,24.58
+image_121.jpg,Defect,134215,45353,33.79
+image_122.jpg,Defect,156239,52492,33.60
+image_123.jpg,Defect,146370,49820,34.04
+image_124.jpg,Defect,156644,57369,36.62
+image_125.jpg,Defect,153371,50959,33.23
+image_126.jpg,Defect,157540,55490,35.22
+image_127.jpg,Defect,150083,57447,38.28
+image_128.jpg,Defect,155238,52527,33.84
+image_129.jpg,Defect,170579,55436,32.50
+image_13.jpg,Defect,221846,62503,28.17
+image_130.jpg,Defect,172382,83248,48.29
+image_131.jpg,Defect,152407,52317,34.33
+image_132.jpg,Defect,169318,62852,37.12
+image_133.jpg,Defect,184284,77133,41.86
+image_134.jpg,Defect,159247,62600,39.31
+image_135.jpg,Defect,172185,66432,38.58
+image_136.jpg,Defect,160873,55434,34.46
+image_137.jpg,Defect,135445,56228,41.51
+image_138.jpg,Defect,152305,49945,32.79
+image_139.jpg,Defect,146533,51116,34.88
+image_14.jpg,Defect,224639,80792,35.97
+image_140.jpg,Defect,152665,44491,29.14
+image_141.jpg,Defect,145027,51023,35.18
+image_142.jpg,Defect,140142,51459,36.72
+image_143.jpg,Defect,137154,64402,46.96
+image_144.jpg,Defect,155124,66671,42.98
+image_145.jpg,Defect,130196,49826,38.27
+image_146.jpg,Defect,111699,40415,36.18
+image_147.jpg,Defect,122160,47060,38.52
+image_148.jpg,Defect,174855,70778,40.48
+image_149.jpg,Defect,172367,66808,38.76
+image_15.jpg,Defect,227861,82025,36.00
+image_150.jpg,Defect,162741,70165,43.11
+image_151.jpg,Defect,165717,68362,41.25
+image_152.jpg,Defect,147010,60008,40.82
+image_153.jpg,Defect,155633,67516,43.38
+image_154.jpg,Defect,172895,70982,41.05
+image_155.jpg,Defect,149195,51335,34.41
+image_156.jpg,Defect,152129,46070,30.28
+image_157.jpg,Defect,169644,63310,37.32
+image_158.jpg,Defect,143304,51057,35.63
+image_159.jpg,Defect,156687,51479,32.85
+image_16.jpg,Defect,226401,72936,32.22
+image_160.jpg,Defect,165530,76030,45.93
+image_161.jpg,Defect,166110,59285,35.69
+image_162.jpg,Defect,161120,59966,37.22
+image_163.jpg,Defect,142744,61197,42.87
+image_164.jpg,Defect,155707,66502,42.71
+image_165.jpg,Defect,187909,77677,41.34
+image_166.jpg,Defect,161966,49077,30.30
+image_167.jpg,Defect,165717,54537,32.91
+image_168.jpg,Defect,142863,38894,27.22
+image_169.jpg,Defect,140451,49743,35.42
+image_17.jpg,Defect,229625,82297,35.84
+image_170.jpg,Defect,164503,60677,36.89
+image_171.jpg,Defect,176728,67957,38.45
+image_172.jpg,Defect,160371,54761,34.15
+image_173.jpg,Defect,148889,60329,40.52
+image_174.jpg,Defect,170566,65184,38.22
+image_175.jpg,Defect,169266,77336,45.69
+image_176.jpg,Defect,175698,66342,37.76
+image_177.jpg,Defect,115177,56032,48.65
+image_178.jpg,Defect,137359,58114,42.31
+image_179.jpg,Defect,119513,62096,51.96
+image_18.jpg,Defect,192919,76682,39.75
+image_180.jpg,Defect,158037,54905,34.74
+image_181.jpg,Defect,151538,49066,32.38
+image_182.jpg,Defect,154311,49174,31.87
+image_183.jpg,Defect,180362,83125,46.09
+image_184.jpg,Defect,169970,61325,36.08
+image_185.jpg,Defect,178638,74008,41.43
+image_186.jpg,Defect,169738,49200,28.99
+image_187.jpg,Defect,141822,53974,38.06
+image_188.jpg,Defect,148013,67131,45.35
+image_189.jpg,Defect,122387,38321,31.31
+image_19.jpg,Defect,189511,46360,24.46
+image_190.jpg,Defect,136830,46910,34.28
+image_191.jpg,Defect,115838,52409,45.24
+image_192.jpg,Defect,133479,44498,33.34
+image_193.jpg,Defect,154044,53824,34.94
+image_194.jpg,Defect,135519,52472,38.72
+image_195.jpg,Defect,119268,35403,29.68
+image_196.jpg,Defect,120727,34926,28.93
+image_197.jpg,Defect,148948,49759,33.41
+image_198.jpg,Defect,157167,60355,38.40
+image_199.jpg,Defect,195560,48210,24.65
+image_2.jpg,Defect,161260,49034,30.41
+image_20.jpg,Defect,189902,65405,34.44
+image_200.jpg,Defect,126729,37977,29.97
+image_201.jpg,Defect,131511,39816,30.28
+image_202.jpg,Defect,177312,50448,28.45
+image_203.jpg,Defect,72040,36794,51.07
+image_204.jpg,Defect,97387,54878,56.35
+image_205.jpg,Defect,79228,36731,46.36
+image_206.jpg,Defect,95619,27099,28.34
+image_207.jpg,Defect,104961,48398,46.11
+image_208.jpg,Defect,81134,44595,54.96
+image_209.jpg,Defect,83161,37931,45.61
+image_21.jpg,Defect,185542,62420,33.64
+image_210.jpg,Defect,90810,41573,45.78
+image_211.jpg,Defect,83948,47234,56.27
+image_212.jpg,Defect,95533,52850,55.32
+image_213.jpg,Defect,84534,42326,50.07
+image_214.jpg,Defect,96382,38288,39.73
+image_215.jpg,Defect,98383,54983,55.89
+image_216.jpg,Defect,115328,51541,44.69
+image_217.jpg,Defect,100284,46372,46.24
+image_218.jpg,Defect,92122,52220,56.69
+image_219.jpg,Defect,92434,55413,59.95
+image_22.jpg,Defect,181665,39100,21.52
+image_220.jpg,Defect,99058,42690,43.10
+image_221.jpg,Defect,83224,30344,36.46
+image_222.jpg,Defect,99492,38726,38.92
+image_223.jpg,Defect,100157,40830,40.77
+image_224.jpg,Defect,81911,34303,41.88
+image_225.jpg,Defect,97656,43407,44.45
+image_226.jpg,Defect,87204,36786,42.18
+image_227.jpg,Defect,95746,38768,40.49
+image_228.jpg,Defect,126408,51780,40.96
+image_229.jpg,Defect,116032,67275,57.98
+image_23.jpg,Defect,136950,40018,29.22
+image_230.jpg,Defect,114211,28741,25.16
+image_231.jpg,Defect,108868,29446,27.05
+image_232.jpg,Defect,101118,34066,33.69
+image_233.jpg,Defect,89529,32068,35.82
+image_234.jpg,Defect,111341,60644,54.47
+image_235.jpg,Defect,115929,55010,47.45
+image_236.jpg,Defect,112053,54058,48.24
+image_237.jpg,Defect,97383,55636,57.13
+image_238.jpg,Defect,89711,29425,32.80
+image_239.jpg,Defect,124973,48921,39.15
+image_24.jpg,Defect,140000,46019,32.87
+image_240.jpg,Defect,90160,46855,51.97
+image_241.jpg,Defect,90596,53104,58.62
+image_242.jpg,Defect,107210,42402,39.55
+image_243.jpg,Defect,105213,71454,67.91
+image_244.jpg,Defect,99225,35850,36.13
+image_245.jpg,Defect,98127,36406,37.10
+image_246.jpg,Defect,107233,49989,46.62
+image_247.jpg,Defect,100906,44796,44.39
+image_248.jpg,Defect,113838,43207,37.95
+image_249.jpg,Defect,110178,52116,47.30
+image_25.jpg,Defect,143976,46333,32.18
+image_250.jpg,Defect,104348,48601,46.58
+image_251.jpg,Defect,116181,60664,52.22
+image_252.jpg,Defect,109585,46002,41.98
+image_253.jpg,Defect,87154,34438,39.51
+image_254.jpg,Defect,113830,40852,35.89
+image_255.jpg,Defect,84905,40166,47.31
+image_256.jpg,Defect,109751,40344,36.76
+image_257.jpg,Defect,85915,46450,54.07
+image_258.jpg,Defect,102780,35908,34.94
+image_259.jpg,Defect,89064,42928,48.20
+image_26.jpg,Defect,133969,30672,22.89
+image_260.jpg,Defect,91282,45430,49.77
+image_261.jpg,Defect,89325,53664,60.08
+image_262.jpg,Defect,99436,43770,44.02
+image_263.jpg,Defect,113471,40810,35.97
+image_264.jpg,Defect,87415,41574,47.56
+image_265.jpg,Defect,111806,55156,49.33
+image_266.jpg,Defect,93507,48529,51.90
+image_267.jpg,Defect,107765,39053,36.24
+image_268.jpg,Defect,81854,40602,49.60
+image_269.jpg,Defect,94111,45116,47.94
+image_27.jpg,Defect,170462,56540,33.17
+image_270.jpg,Defect,113825,46991,41.28
+image_271.jpg,Defect,99245,46944,47.30
+image_272.jpg,Defect,95156,42992,45.18
+image_273.jpg,Defect,91648,43251,47.19
+image_274.jpg,Defect,114381,49149,42.97
+image_275.jpg,Defect,104065,52430,50.38
+image_276.jpg,Defect,94395,38084,40.35
+image_277.jpg,Defect,94966,39439,41.53
+image_278.jpg,Defect,99423,37868,38.09
+image_279.jpg,Defect,112913,47736,42.28
+image_28.jpg,Defect,172407,52138,30.24
+image_280.jpg,Defect,123855,45922,37.08
+image_281.jpg,Defect,117174,76180,65.01
+image_282.jpg,Defect,153665,86010,55.97
+image_283.jpg,Defect,154796,61316,39.61
+image_284.jpg,Defect,108433,58659,54.10
+image_285.jpg,Defect,116438,63429,54.47
+image_286.jpg,Defect,125465,63845,50.89
+image_287.jpg,Defect,88743,37694,42.48
+image_288.jpg,Defect,95915,43645,45.50
+image_289.jpg,Defect,85927,37308,43.42
+image_29.jpg,Defect,196456,55646,28.32
+image_290.jpg,Defect,94221,37126,39.40
+image_291.jpg,Defect,100675,45827,45.52
+image_292.jpg,Defect,75113,32290,42.99
+image_293.jpg,Defect,92574,40225,43.45
+image_294.jpg,Defect,99402,37343,37.57
+image_295.jpg,Defect,91567,36112,39.44
+image_296.jpg,Defect,101281,37930,37.45
+image_297.jpg,Defect,82008,36576,44.60
+image_298.jpg,Defect,95339,38798,40.69
+image_299.jpg,Defect,99714,43471,43.60
+image_3.jpg,Defect,157235,51393,32.69
+image_30.jpg,Defect,164522,48033,29.20
+image_300.jpg,Defect,98160,36370,37.05
+image_301.jpg,Defect,102830,42820,41.64
+image_302.jpg,Defect,137752,58256,42.29
+image_303.jpg,Defect,180168,53580,29.74
+image_304.jpg,Defect,140429,71289,50.77
+image_305.jpg,Defect,166179,62369,37.53
+image_306.jpg,Defect,134719,65514,48.63
+image_307.jpg,Defect,120415,51077,42.42
+image_308.jpg,Defect,173186,50996,29.45
+image_309.jpg,Defect,149646,53053,35.45
+image_31.jpg,Defect,182678,54481,29.82
+image_310.jpg,Defect,159654,53234,33.34
+image_311.jpg,Defect,174696,59126,33.85
+image_312.jpg,Defect,176488,58434,33.11
+image_313.jpg,Defect,163879,61330,37.42
+image_314.jpg,Defect,153159,59650,38.95
+image_315.jpg,Defect,182175,79090,43.41
+image_316.jpg,Defect,153697,48865,31.79
+image_317.jpg,Defect,165166,57014,34.52
+image_318.jpg,Defect,150969,66195,43.85
+image_319.jpg,Defect,158919,66371,41.76
+image_32.jpg,Defect,223822,57607,25.74
+image_320.jpg,Defect,147795,56692,38.36
+image_321.jpg,Defect,158316,72439,45.76
+image_322.jpg,Defect,173674,57783,33.27
+image_323.jpg,Defect,175626,44105,25.11
+image_324.jpg,Defect,144766,66117,45.67
+image_325.jpg,Defect,137338,57367,41.77
+image_326.jpg,Defect,145481,68353,46.98
+image_327.jpg,Defect,176382,76435,43.33
+image_328.jpg,Defect,158832,49123,30.93
+image_329.jpg,Defect,146488,50197,34.27
+image_33.jpg,Defect,147018,45524,30.96
+image_330.jpg,Defect,145432,49224,33.85
+image_331.jpg,Defect,143140,69151,48.31
+image_332.jpg,Defect,156170,66080,42.31
+image_333.jpg,Defect,164671,64901,39.41
+image_334.jpg,Defect,161234,64499,40.00
+image_335.jpg,Defect,161005,70006,43.48
+image_336.jpg,Defect,126458,61707,48.80
+image_337.jpg,Defect,177372,78827,44.44
+image_338.jpg,Defect,144515,53297,36.88
+image_339.jpg,Defect,135699,65127,47.99
+image_34.jpg,Defect,130904,44712,34.16
+image_340.jpg,Defect,172280,73961,42.93
+image_341.jpg,Defect,155171,62307,40.15
+image_342.jpg,Defect,160674,59654,37.13
+image_343.jpg,Defect,144056,55417,38.47
+image_344.jpg,Defect,137184,56748,41.37
+image_345.jpg,Defect,142793,58952,41.28
+image_346.jpg,Defect,173851,65418,37.63
+image_347.jpg,Defect,182643,55110,30.17
+image_348.jpg,Defect,162658,71067,43.69
+image_349.jpg,Defect,178524,68093,38.14
+image_35.jpg,Defect,150951,51895,34.38
+image_350.jpg,Defect,146423,51194,34.96
+image_351.jpg,Defect,173413,67381,38.86
+image_352.jpg,Defect,135557,57732,42.59
+image_353.jpg,Defect,168774,68251,40.44
+image_354.jpg,Defect,154902,65638,42.37
+image_355.jpg,Defect,140262,55564,39.61
+image_356.jpg,Defect,160584,65284,40.65
+image_357.jpg,Defect,153087,67183,43.89
+image_358.jpg,Defect,162138,61580,37.98
+image_359.jpg,Defect,182951,79290,43.34
+image_36.jpg,Defect,156016,47664,30.55
+image_360.jpg,Defect,160255,64076,39.98
+image_361.jpg,Defect,164120,65228,39.74
+image_362.jpg,Defect,161956,70144,43.31
+image_363.jpg,Defect,168334,52058,30.93
+image_364.jpg,Defect,166932,59811,35.83
+image_365.jpg,Defect,207201,67030,32.35
+image_366.jpg,Defect,173577,63087,36.35
+image_367.jpg,Defect,170147,81804,48.08
+image_368.jpg,Defect,191439,77889,40.69
+image_369.jpg,Defect,169337,83300,49.19
+image_37.jpg,Defect,170018,51921,30.54
+image_370.jpg,Defect,174617,65585,37.56
+image_371.jpg,Defect,177619,88906,50.05
+image_372.jpg,Defect,172305,79833,46.33
+image_373.jpg,Defect,175051,70943,40.53
+image_374.jpg,Defect,167518,90055,53.76
+image_375.jpg,Defect,169488,88356,52.13
+image_376.jpg,Defect,157500,87245,55.39
+image_377.jpg,Defect,183508,85438,46.56
+image_378.jpg,Defect,193032,71144,36.86
+image_379.jpg,Defect,168763,87200,51.67
+image_38.jpg,Defect,167149,50450,30.18
+image_380.jpg,Defect,153702,78850,51.30
+image_381.jpg,Defect,170854,84847,49.66
+image_382.jpg,Defect,173196,76678,44.27
+image_383.jpg,Defect,196793,83361,42.36
+image_384.jpg,Defect,177736,77679,43.70
+image_385.jpg,Defect,182731,82965,45.40
+image_386.jpg,Defect,186989,78574,42.02
+image_387.jpg,Defect,200036,85312,42.65
+image_388.jpg,Defect,172347,67862,39.38
+image_389.jpg,Defect,168464,52482,31.15
+image_39.jpg,Defect,162070,49229,30.38
+image_390.jpg,Defect,177859,82810,46.56
+image_391.jpg,Defect,214918,62526,29.09
+image_392.jpg,Defect,172592,66128,38.31
+image_393.jpg,Defect,156728,65801,41.98
+image_394.jpg,Defect,176109,80921,45.95
+image_395.jpg,Defect,192425,71124,36.96
+image_396.jpg,Defect,170177,78743,46.27
+image_397.jpg,Defect,173192,75919,43.84
+image_398.jpg,Defect,149481,62276,41.66
+image_399.jpg,Defect,165237,61749,37.37
+image_4.jpg,Defect,159051,65337,41.08
+image_40.jpg,Defect,150519,50384,33.47
+image_400.jpg,Defect,169598,26632,15.70
+image_401.jpg,Defect,183065,71407,39.01
+image_402.jpg,Defect,149047,44203,29.66
+image_41.jpg,Defect,149181,51253,34.36
+image_42.jpg,Defect,153145,61063,39.87
+image_43.jpg,Defect,151044,57685,38.19
+image_44.jpg,Defect,153981,69387,45.06
+image_45.jpg,Defect,154354,70116,45.43
+image_46.jpg,Defect,161896,65307,40.34
+image_47.jpg,Defect,159033,84092,52.88
+image_48.jpg,Defect,155109,51004,32.88
+image_49.jpg,Defect,201540,84177,41.77
+image_5.jpg,Defect,161294,50254,31.16
+image_50.jpg,Defect,196445,65234,33.21
+image_51.jpg,Defect,233903,59411,25.40
+image_52.jpg,Defect,218074,85761,39.33
+image_53.jpg,Defect,219629,61942,28.20
+image_54.jpg,Defect,206586,75644,36.62
+image_55.jpg,Defect,206608,72524,35.10
+image_56.jpg,Defect,191065,78228,40.94
+image_57.jpg,Defect,188713,74514,39.49
+image_58.jpg,Defect,199374,85362,42.82
+image_59.jpg,Defect,194344,83431,42.93
+image_6.jpg,Defect,180178,57481,31.90
+image_60.jpg,Defect,204331,83716,40.97
+image_61.jpg,Defect,174308,72368,41.52
+image_62.jpg,Defect,204122,64927,31.81
+image_63.jpg,Defect,205970,61039,29.63
+image_64.jpg,Defect,208534,62773,30.10
+image_65.jpg,Defect,244722,81128,33.15
+image_66.jpg,Defect,268389,65846,24.53
+image_67.jpg,Defect,84697,35612,42.05
+image_68.jpg,Defect,100540,41319,41.10
+image_69.jpg,Defect,107222,56278,52.49
+image_7.jpg,Defect,186825,80513,43.10
+image_70.jpg,Defect,104621,33596,32.11
+image_71.jpg,Defect,101353,22925,22.62
+image_72.jpg,Defect,89383,23275,26.04
+image_73.jpg,Defect,119064,51298,43.08
+image_74.jpg,Defect,122039,52739,43.21
+image_75.jpg,Defect,104821,53419,50.96
+image_76.jpg,Defect,108830,58004,53.30
+image_77.jpg,Defect,121691,61959,50.92
+image_78.jpg,Defect,106251,37550,35.34
+image_79.jpg,Defect,94073,37144,39.48
+image_8.jpg,Defect,187764,60586,32.27
+image_80.jpg,Defect,88940,28205,31.71
+image_81.jpg,Defect,89056,27987,31.43
+image_82.jpg,Defect,88144,36690,41.63
+image_83.jpg,Defect,109605,35509,32.40
+image_84.jpg,Defect,111592,49596,44.44
+image_85.jpg,Defect,124971,55959,44.78
+image_86.jpg,Defect,121460,39324,32.38
+image_87.jpg,Defect,105450,34869,33.07
+image_88.jpg,Defect,112739,61816,54.83
+image_89.jpg,Defect,115197,57228,49.68
+image_9.jpg,Defect,180635,62430,34.56
+image_90.jpg,Defect,100822,53323,52.89
+image_91.jpg,Defect,116287,45898,39.47
+image_92.jpg,Defect,111083,40385,36.36
+image_93.jpg,Defect,106143,32836,30.94
+image_94.jpg,Defect,101466,54901,54.11
+image_95.jpg,Defect,120273,41130,34.20
+image_96.jpg,Defect,105452,48531,46.02
+image_97.jpg,Defect,86599,36864,42.57
+image_98.jpg,Defect,109537,45940,41.94
+image_99.jpg,Defect,96448,34808,36.09

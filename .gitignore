@@ -7,11 +7,8 @@ __pycache__/
 venv/
 
 # Datasets
-data/ripeness/
-data/quality/
+data/
 
-# Generated experimental outputs
-results/
 
 # VS Code
 .vscode/
@@ -19,7 +16,5 @@ results/
 # OS
 .DS_Store
 Thumbs.db
-dataset/
 .vscode/
-Fruits_Data/
-results/*.joblib
+
