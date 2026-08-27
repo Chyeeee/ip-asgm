@@ -16,48 +16,25 @@ from config import (
 
 def find_mask(image_path):
     """
-    Find the ROI mask corresponding to a processed image.
+    Match processed image with corresponding ROI mask.
 
     Example:
-
-    Processed image:
     Apple_Overripe_001.jpg
-
-    ROI mask:
+    ->
     Apple_Overripe_001_mask.png
     """
 
-    # Get path relative to ProcessedImages
-    #
-    # Example:
-    # Apple/Overripe/Apple_Overripe_001.jpg
     relative_path = image_path.relative_to(
         PROCESSED_DIR
     )
 
-    # Corresponding ROI mask folder
-    #
-    # Example:
-    # ROIMasks/Apple/Overripe/
     mask_folder = (
         MASK_DIR
         / relative_path.parent
     )
 
-    # ========================================================
-    # MAIN MASK NAMING FORMAT
-    # ========================================================
-    #
-    # Processed:
-    # Apple_Overripe_001.jpg
-    #
-    # Mask:
-    # Apple_Overripe_001_mask.png
-    #
-
-    mask_stem = (
-        f"{image_path.stem}_mask"
-    )
+    # Main mask format
+    mask_stem = f"{image_path.stem}_mask"
 
     for extension in SUPPORTED_EXTENSIONS:
 
@@ -69,13 +46,7 @@ def find_mask(image_path):
         if mask_path.exists():
             return mask_path
 
-    # ========================================================
-    # FALLBACK
-    # ========================================================
-    # Also try exact same filename stem just in case
-    # some masks do not contain "_mask".
-    # ========================================================
-
+    # Fallback: same stem without "_mask"
     for extension in SUPPORTED_EXTENSIONS:
 
         mask_path = (
@@ -90,14 +61,11 @@ def find_mask(image_path):
 
 
 # ============================================================
-# GET DATASET INFORMATION
+# GET FRUIT + CATEGORY
 # ============================================================
 
 def get_metadata(image_path):
     """
-    Extract fruit name and ripeness category
-    from the folder structure.
-
     Example:
 
     ProcessedImages/
@@ -109,74 +77,49 @@ def get_metadata(image_path):
     category = Overripe
     """
 
-    relative_path = (
-        image_path.relative_to(
-            PROCESSED_DIR
-        )
+    relative_path = image_path.relative_to(
+        PROCESSED_DIR
     )
 
     parts = relative_path.parts
 
-    # Immediate parent folder
-    # Example: Overripe
-    category = (
-        image_path.parent.name
-    )
+    category = image_path.parent.name
 
-    # Folder before category
-    # Example: Apple
     if len(parts) >= 3:
-
         fruit = parts[-3]
-
     else:
-
         fruit = "Unknown"
 
-    return (
-        fruit,
-        category,
-    )
+    return fruit, category
 
 
 # ============================================================
-# GET ALL IMAGE + MASK PAIRS
+# GET COMPLETE DATASET
 # ============================================================
 
 def get_dataset_records():
     """
-    Scan all processed images and find
-    their corresponding ROI masks.
+    Scan all processed images and match them
+    with their ROI masks.
     """
-
-    # --------------------------------------------------------
-    # Check folders
-    # --------------------------------------------------------
 
     if not PROCESSED_DIR.exists():
 
         raise FileNotFoundError(
-            f"\nProcessedImages folder "
-            f"not found:\n"
+            f"\nProcessedImages folder not found:\n"
             f"{PROCESSED_DIR}"
         )
 
     if not MASK_DIR.exists():
 
         raise FileNotFoundError(
-            f"\nROIMasks folder "
-            f"not found:\n"
+            f"\nROIMasks folder not found:\n"
             f"{MASK_DIR}"
         )
 
-    # --------------------------------------------------------
-    # Find processed images
-    # --------------------------------------------------------
-
     image_paths = sorted([
         path
-        for path
-        in PROCESSED_DIR.rglob("*")
+        for path in PROCESSED_DIR.rglob("*")
         if (
             path.is_file()
             and
@@ -194,10 +137,6 @@ def get_dataset_records():
 
     missing_masks = 0
 
-    # --------------------------------------------------------
-    # Match image with mask
-    # --------------------------------------------------------
-
     for image_path in image_paths:
 
         mask_path = find_mask(
@@ -207,32 +146,18 @@ def get_dataset_records():
         if mask_path is None:
 
             missing_masks += 1
-
             continue
 
-        fruit, category = (
-            get_metadata(
-                image_path
-            )
+        fruit, category = get_metadata(
+            image_path
         )
 
         records.append({
-            "image_path":
-                image_path,
-
-            "mask_path":
-                mask_path,
-
-            "fruit":
-                fruit,
-
-            "category":
-                category,
+            "image_path": image_path,
+            "mask_path": mask_path,
+            "fruit": fruit,
+            "category": category,
         })
-
-    # --------------------------------------------------------
-    # Summary
-    # --------------------------------------------------------
 
     print(
         f"Valid image-mask pairs: "
@@ -248,18 +173,26 @@ def get_dataset_records():
 
 
 # ============================================================
-# CREATE REPRESENTATIVE SAMPLE
+# CREATE BALANCED PER-FRUIT SAMPLE
 # ============================================================
 
-def create_representative_sample(
-    records
-):
+def create_per_fruit_sample(records):
     """
-    Select a representative balanced sample
-    for RGB vs HSV vs Lab comparison.
+    Create a representative sample separately
+    for every fruit + category.
 
-    SAMPLE_PER_FRUIT_CATEGORY controls how many images
-    are selected from each ripeness category.
+    Example:
+
+    Apple:
+        Overripe = 20
+        Ripe     = 20
+        Rotten   = 20
+        Unripe   = 20
+
+    Guava:
+        Class_A  = 20
+        Class_B  = 20
+        Defect   = 20
     """
 
     df = pd.DataFrame(
@@ -269,38 +202,35 @@ def create_representative_sample(
     if df.empty:
 
         raise RuntimeError(
-            "No valid image-mask pairs "
-            "were found."
+            "No valid image-mask pairs found."
         )
 
-    # --------------------------------------------------------
-    # Show available images
-    # --------------------------------------------------------
+    print("\nDataset distribution:")
+    print("-" * 70)
 
-    print(
-        "\nAvailable images "
-        "per category:"
+    distribution = (
+        df.groupby(
+            ["fruit", "category"]
+        )
+        .size()
+        .reset_index(
+            name="Count"
+        )
     )
 
     print(
-        df[
-            "category"
-        ]
-        .value_counts()
-        .sort_index()
+        distribution.to_string(
+            index=False
+        )
     )
 
     sampled_groups = []
 
-    # --------------------------------------------------------
-    # Sample same number from each class
-    # --------------------------------------------------------
-
     for (
+        fruit,
         category,
-        group,
-    ) in df.groupby(
-        "category"
+    ), group in df.groupby(
+        ["fruit", "category"]
     ):
 
         sample_size = min(
@@ -317,16 +247,11 @@ def create_representative_sample(
             sampled
         )
 
-    # --------------------------------------------------------
-    # Combine sampled classes
-    # --------------------------------------------------------
-
     sample_df = pd.concat(
         sampled_groups,
         ignore_index=True,
     )
 
-    # Shuffle sample
     sample_df = sample_df.sample(
         frac=1,
         random_state=RANDOM_STATE,
@@ -334,20 +259,25 @@ def create_representative_sample(
         drop=True
     )
 
-    # --------------------------------------------------------
-    # Show sample distribution
-    # --------------------------------------------------------
+    print("\n")
+    print("=" * 70)
+    print("REPRESENTATIVE SAMPLE")
+    print("=" * 70)
 
-    print(
-        "\nRepresentative sample:"
+    sample_distribution = (
+        sample_df.groupby(
+            ["fruit", "category"]
+        )
+        .size()
+        .reset_index(
+            name="Sample"
+        )
     )
 
     print(
-        sample_df[
-            "category"
-        ]
-        .value_counts()
-        .sort_index()
+        sample_distribution.to_string(
+            index=False
+        )
     )
 
     print(
@@ -359,7 +289,7 @@ def create_representative_sample(
 
 
 # ============================================================
-# LOAD IMAGE AND ROI MASK
+# LOAD IMAGE + ROI MASK
 # ============================================================
 
 def load_image_mask(
@@ -367,22 +297,13 @@ def load_image_mask(
     mask_path,
 ):
     """
-    Load processed image and corresponding
-    binary ROI mask.
+    Load processed image and its ROI mask.
     """
-
-    # --------------------------------------------------------
-    # Load processed image
-    # --------------------------------------------------------
 
     image = cv2.imread(
         str(image_path),
         cv2.IMREAD_COLOR,
     )
-
-    # --------------------------------------------------------
-    # Load ROI mask as grayscale
-    # --------------------------------------------------------
 
     mask = cv2.imread(
         str(mask_path),
@@ -403,15 +324,8 @@ def load_image_mask(
             f"{mask_path}"
         )
 
-    # --------------------------------------------------------
     # Make sure mask size matches image
-    # --------------------------------------------------------
-
-    if (
-        mask.shape[:2]
-        !=
-        image.shape[:2]
-    ):
+    if mask.shape[:2] != image.shape[:2]:
 
         mask = cv2.resize(
             mask,
@@ -419,17 +333,10 @@ def load_image_mask(
                 image.shape[1],
                 image.shape[0],
             ),
-            interpolation=
-                cv2.INTER_NEAREST,
+            interpolation=cv2.INTER_NEAREST,
         )
 
-    # --------------------------------------------------------
-    # Convert mask into strict binary:
-    #
-    # background = 0
-    # fruit      = 255
-    # --------------------------------------------------------
-
+    # Convert ROI mask into strict binary mask
     _, mask = cv2.threshold(
         mask,
         127,
@@ -437,7 +344,4 @@ def load_image_mask(
         cv2.THRESH_BINARY,
     )
 
-    return (
-        image,
-        mask,
-    )
+    return image, mask
