@@ -1,381 +1,102 @@
+from __future__ import annotations
+
+import math
+from collections import defaultdict
+
 import cv2
 import numpy as np
-import pandas as pd
 
-from .config import (
-    GLCM_ANGLES_DEGREES,
-    GLCM_DISTANCE,
-    GLCM_LEVELS,
-    GLCM_PROPERTIES,
-)
-from .data_loader import ImageRecord
-from .preprocessing import preprocess_image
+from .config import GLCM_ANGLES_DEG, GLCM_LEVELS, GLCM_PROPERTIES
 
 
-# ============================================================
-# GRAYSCALE QUANTIZATION
-# ============================================================
+def quantize_gray(gray: np.ndarray, levels: int = GLCM_LEVELS) -> np.ndarray:
+    if gray.dtype != np.uint8:
+        gray = np.clip(gray, 0, 255).astype(np.uint8)
+    q = (gray.astype(np.uint16) * levels // 256).astype(np.uint8)
+    return np.clip(q, 0, levels - 1)
 
-def quantize_image(
-    gray: np.ndarray,
-    levels: int,
-) -> np.ndarray:
-    """
-    Reduce grayscale values from 0-255 to a smaller number of levels.
-
-    Example:
-    256 grayscale levels -> 32 grayscale levels.
-
-    This reduces GLCM computation while preserving important
-    texture information.
-    """
-
-    quantized = (
-        gray.astype(np.float32)
-        * levels
-        / 256.0
-    )
-
-    quantized = np.clip(
-        quantized,
-        0,
-        levels - 1,
-    )
-
-    return quantized.astype(
-        np.uint8
-    )
-
-
-# ============================================================
-# ANGLE TO PIXEL OFFSET
-# ============================================================
-
-def _offset_from_angle(
-    distance: int,
-    angle_degrees: float,
-) -> tuple[int, int]:
-    """
-    Convert GLCM angle into row and column offsets.
-
-    The assignment uses:
-    0 degrees
-    45 degrees
-    90 degrees
-    135 degrees
-    """
-
-    radians = np.deg2rad(
-        angle_degrees
-    )
-
-    dx = int(
-        round(
-            np.cos(radians)
-            * distance
-        )
-    )
-
-    dy = int(
-        round(
-            -np.sin(radians)
-            * distance
-        )
-    )
-
-    return dy, dx
-
-
-# ============================================================
-# MASKED GLCM
-# ============================================================
 
 def masked_glcm(
-    quantized: np.ndarray,
+    gray: np.ndarray,
     mask: np.ndarray,
-    levels: int,
     distance: int,
-    angle_degrees: float,
+    angle_deg: float,
+    levels: int = GLCM_LEVELS,
+    symmetric: bool = True,
 ) -> np.ndarray:
-    """
-    Construct a GLCM using only banana pixels.
+    """Build GLCM only from neighbour pairs where BOTH pixels are inside ROI."""
+    q = quantize_gray(gray, levels)
+    m = mask.astype(bool)
 
-    A pixel pair is counted only when BOTH:
-    - reference pixel is inside banana ROI
-    - neighbouring pixel is inside banana ROI
+    theta = math.radians(angle_deg)
+    dx = int(round(distance * math.cos(theta)))
+    dy = int(round(-distance * math.sin(theta)))
+    if dx == 0 and dy == 0:
+        dx = distance
 
-    This prevents the white background from affecting the
-    texture features.
-    """
+    h, w = gray.shape
+    y0 = max(0, -dy)
+    y1 = min(h, h - dy)
+    x0 = max(0, -dx)
+    x1 = min(w, w - dx)
+    if y1 <= y0 or x1 <= x0:
+        return np.zeros((levels, levels), dtype=np.float64)
 
-    dy, dx = _offset_from_angle(
-        distance,
-        angle_degrees,
-    )
+    src_q = q[y0:y1, x0:x1]
+    dst_q = q[y0 + dy : y1 + dy, x0 + dx : x1 + dx]
+    valid = m[y0:y1, x0:x1] & m[y0 + dy : y1 + dy, x0 + dx : x1 + dx]
 
-    height, width = (
-        quantized.shape
-    )
+    i = src_q[valid].astype(np.int64)
+    j = dst_q[valid].astype(np.int64)
+    matrix = np.zeros((levels, levels), dtype=np.float64)
+    if i.size == 0:
+        return matrix
 
-    y_start = max(
-        0,
-        -dy,
-    )
+    np.add.at(matrix, (i, j), 1.0)
+    if symmetric:
+        np.add.at(matrix, (j, i), 1.0)
 
-    y_end = min(
-        height,
-        height - dy,
-    )
-
-    x_start = max(
-        0,
-        -dx,
-    )
-
-    x_end = min(
-        width,
-        width - dx,
-    )
-
-    source = quantized[
-        y_start:y_end,
-        x_start:x_end,
-    ]
-
-    neighbour = quantized[
-        y_start + dy:y_end + dy,
-        x_start + dx:x_end + dx,
-    ]
-
-    source_mask = (
-        mask[
-            y_start:y_end,
-            x_start:x_end,
-        ]
-        > 0
-    )
-
-    neighbour_mask = (
-        mask[
-            y_start + dy:y_end + dy,
-            x_start + dx:x_end + dx,
-        ]
-        > 0
-    )
-
-    # Both pixels must belong to banana region.
-    valid = (
-        source_mask
-        & neighbour_mask
-    )
-
-    source_values = source[
-        valid
-    ].astype(
-        np.int32
-    )
-
-    neighbour_values = neighbour[
-        valid
-    ].astype(
-        np.int32
-    )
-
-    matrix = np.zeros(
-        (
-            levels,
-            levels,
-        ),
-        dtype=np.float64,
-    )
-
-    # Count gray-level pairs.
-    np.add.at(
-        matrix,
-        (
-            source_values,
-            neighbour_values,
-        ),
-        1,
-    )
-
-    # Make matrix symmetric.
-    matrix = (
-        matrix
-        + matrix.T
-    )
-
-    # Normalize.
     total = matrix.sum()
-
     if total > 0:
         matrix /= total
-
     return matrix
 
 
-# ============================================================
-# GLCM FEATURE CALCULATION
-# ============================================================
+def glcm_properties(matrix: np.ndarray) -> dict[str, float]:
+    if matrix.sum() <= 0:
+        return {k: 0.0 for k in GLCM_PROPERTIES}
 
-def calculate_glcm_properties(
-    matrix: np.ndarray,
-) -> dict[str, float]:
-    """
-    Calculate six GLCM texture features:
+    n = matrix.shape[0]
+    ii, jj = np.meshgrid(np.arange(n), np.arange(n), indexing="ij")
+    diff = ii - jj
 
-    1. Contrast
-    2. Dissimilarity
-    3. Homogeneity
-    4. Energy
-    5. Correlation
-    6. ASM
-    """
+    contrast = float(np.sum(matrix * diff**2))
+    dissimilarity = float(np.sum(matrix * np.abs(diff)))
+    homogeneity = float(np.sum(matrix / (1.0 + diff**2)))
+    asm = float(np.sum(matrix**2))
+    energy = float(np.sqrt(asm))
 
-    levels = matrix.shape[0]
-
-    i, j = np.indices(
-        (
-            levels,
-            levels,
-        )
-    )
-
-    difference = (
-        i - j
-    )
-
-    # --------------------------------------------------------
-    # Contrast
-    # Higher value = stronger local intensity differences
-    # --------------------------------------------------------
-
-    contrast = float(
-        np.sum(
-            matrix
-            * difference**2
-        )
-    )
-
-    # --------------------------------------------------------
-    # Dissimilarity
-    # Higher value = neighbouring pixels are more different
-    # --------------------------------------------------------
-
-    dissimilarity = float(
-        np.sum(
-            matrix
-            * np.abs(
-                difference
-            )
-        )
-    )
-
-    # --------------------------------------------------------
-    # Homogeneity
-    # Higher value = smoother / more uniform texture
-    # --------------------------------------------------------
-
-    homogeneity = float(
-        np.sum(
-            matrix
-            / (
-                1.0
-                + difference**2
-            )
-        )
-    )
-
-    # --------------------------------------------------------
-    # ASM
-    # Measures texture uniformity
-    # --------------------------------------------------------
-
-    asm = float(
-        np.sum(
-            matrix**2
-        )
-    )
-
-    # --------------------------------------------------------
-    # Energy
-    # Square root of ASM
-    # --------------------------------------------------------
-
-    energy = float(
-        np.sqrt(
-            asm
-        )
-    )
-
-    # --------------------------------------------------------
-    # Correlation
-    # Measures relationship between neighbouring gray values
-    # --------------------------------------------------------
-
-    pi = matrix.sum(
-        axis=1
-    )
-
-    pj = matrix.sum(
-        axis=0
-    )
-
-    values = np.arange(
-        levels
-    )
-
-    mean_i = np.sum(
-        values
-        * pi
-    )
-
-    mean_j = np.sum(
-        values
-        * pj
-    )
-
-    std_i = np.sqrt(
-        np.sum(
-            (
-                values
-                - mean_i
-            )**2
-            * pi
-        )
-    )
-
-    std_j = np.sqrt(
-        np.sum(
-            (
-                values
-                - mean_j
-            )**2
-            * pj
-        )
-    )
-
-    if (
-        std_i > 0
-        and std_j > 0
-    ):
-
+    px = matrix.sum(axis=1)
+    py = matrix.sum(axis=0)
+    idx = np.arange(n, dtype=float)
+    mu_x = float(np.sum(idx * px))
+    mu_y = float(np.sum(idx * py))
+    sigma_x = float(np.sqrt(np.sum(((idx - mu_x) ** 2) * px)))
+    sigma_y = float(np.sqrt(np.sum(((idx - mu_y) ** 2) * py)))
+    if sigma_x > 1e-12 and sigma_y > 1e-12:
         correlation = float(
-            np.sum(
-                (
-                    (i - mean_i)
-                    * (j - mean_j)
-                    * matrix
-                )
-            )
-            / (
-                std_i
-                * std_j
-            )
+            np.sum(matrix * (ii - mu_x) * (jj - mu_y)) / (sigma_x * sigma_y)
         )
-
     else:
         correlation = 1.0
+
+    nz = matrix[matrix > 0]
+    entropy = float(-np.sum(nz * np.log2(nz))) if nz.size else 0.0
+
+    # Joint grey-level variance. With a symmetric GLCM, row/column variance are
+    # equivalent, so one compact descriptor is sufficient.
+    joint_mean = float(np.sum(matrix * ii))
+    variance = float(np.sum(matrix * (ii - joint_mean) ** 2))
 
     return {
         "contrast": contrast,
@@ -383,414 +104,71 @@ def calculate_glcm_properties(
         "homogeneity": homogeneity,
         "energy": energy,
         "correlation": correlation,
-        "ASM": asm,
+        "asm": asm,
+        "entropy": entropy,
+        "variance": variance,
     }
 
 
-# ============================================================
-# GLOBAL GLCM FEATURE EXTRACTION
-# ============================================================
-
-def extract_glcm_from_image(
-    gray: np.ndarray,
+def extract_glcm_features(
+    image_bgr: np.ndarray,
     mask: np.ndarray,
-) -> tuple[np.ndarray, np.ndarray]:
+    distances=(1,),
+    angles=GLCM_ANGLES_DEG,
+    prefix="glcm",
+    keep_per_distance: bool = False,
+    include_direction_std: bool = False,
+) -> dict[str, float]:
+    """Extract masked GLCM descriptors.
+
+    Strong baseline:
+      * distance 1
+      * 4 directions
+      * 8 GLCM properties
+      * directional mean + directional standard deviation
+
+    Proposed BP-PTD texture specialist:
+      * distances 1, 2 and 3 are kept separately
+      * the same directional statistics are retained at every scale
     """
-    Extract GLCM features from one banana image.
+    gray = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2GRAY)
+    by_distance: dict[int, dict[str, list[float]]] = {
+        int(d): defaultdict(list) for d in distances
+    }
 
-    GLCM is calculated in four directions:
-    0, 45, 90 and 135 degrees.
+    for d in distances:
+        for angle in angles:
+            matrix = masked_glcm(gray, mask, int(d), float(angle))
+            props = glcm_properties(matrix)
+            for name, value in props.items():
+                by_distance[int(d)][name].append(value)
 
-    The mean feature value across all four directions is used.
-
-    Returns:
-    - six GLCM features
-    - averaged GLCM matrix for visualization
-    """
-
-    quantized = quantize_image(
-        gray,
-        GLCM_LEVELS,
-    )
-
-    directional_matrices = []
-    directional_properties = []
-
-    for angle in (
-        GLCM_ANGLES_DEGREES
-    ):
-
-        matrix = masked_glcm(
-            quantized=quantized,
-            mask=mask,
-            levels=GLCM_LEVELS,
-            distance=GLCM_DISTANCE,
-            angle_degrees=angle,
-        )
-
-        directional_matrices.append(
-            matrix
-        )
-
-        properties = (
-            calculate_glcm_properties(
-                matrix
-            )
-        )
-
-        directional_properties.append(
-            properties
-        )
-
-    features = []
-
-    for property_name in (
-        GLCM_PROPERTIES
-    ):
-
-        values = [
-            properties[
-                property_name
-            ]
-            for properties
-            in directional_properties
-        ]
-
-        mean_value = np.mean(
-            values
-        )
-
-        features.append(
-            float(
-                mean_value
-            )
-        )
-
-    average_matrix = np.mean(
-        directional_matrices,
-        axis=0,
-    )
-
-    return (
-        np.asarray(
-            features,
-            dtype=np.float64,
-        ),
-        average_matrix,
-    )
-
-
-# ============================================================
-# LOCAL GLCM TEXTURE MAP
-# ============================================================
-
-def create_local_glcm_contrast_map(
-    gray: np.ndarray,
-    mask: np.ndarray,
-    window_size: int = 21,
-    step: int = 4,
-) -> np.ndarray:
-    """
-    Create a Local GLCM Contrast Map.
-
-    A small window moves across the banana image.
-
-    For every local banana region:
-    1. Calculate GLCM.
-    2. Extract local contrast.
-    3. Store the contrast value.
-
-    The result forms a texture map.
-
-    Brighter regions:
-        Higher local contrast / stronger texture variation.
-
-    Darker regions:
-        Smoother / more uniform texture.
-
-    This map is mainly used for VISUALIZATION.
-    The classification model still uses the six global GLCM features.
-    """
-
-    height, width = (
-        gray.shape
-    )
-
-    half_window = (
-        window_size // 2
-    )
-
-    y_positions = list(
-        range(
-            half_window,
-            height - half_window,
-            step,
-        )
-    )
-
-    x_positions = list(
-        range(
-            half_window,
-            width - half_window,
-            step,
-        )
-    )
-
-    # Small map containing local contrast values.
-    local_map = np.zeros(
-        (
-            len(y_positions),
-            len(x_positions),
-        ),
-        dtype=np.float32,
-    )
-
-    valid_map = np.zeros(
-        local_map.shape,
-        dtype=np.uint8,
-    )
-
-    # --------------------------------------------------------
-    # Move window across banana surface
-    # --------------------------------------------------------
-
-    for row_index, y in enumerate(
-        y_positions
-    ):
-
-        for column_index, x in enumerate(
-            x_positions
-        ):
-
-            # Center pixel must belong to banana.
-            if mask[y, x] == 0:
-                continue
-
-            y1 = (
-                y - half_window
-            )
-
-            y2 = (
-                y
-                + half_window
-                + 1
-            )
-
-            x1 = (
-                x - half_window
-            )
-
-            x2 = (
-                x
-                + half_window
-                + 1
-            )
-
-            gray_patch = gray[
-                y1:y2,
-                x1:x2,
-            ]
-
-            mask_patch = mask[
-                y1:y2,
-                x1:x2,
-            ]
-
-            # ------------------------------------------------
-            # Require most of the window to contain banana.
-            # ------------------------------------------------
-
-            banana_ratio = (
-                np.count_nonzero(
-                    mask_patch
-                )
-                / mask_patch.size
-            )
-
-            if banana_ratio < 0.60:
-                continue
-
-            quantized_patch = (
-                quantize_image(
-                    gray_patch,
-                    GLCM_LEVELS,
-                )
-            )
-
-            local_contrasts = []
-
-            # Calculate local contrast in four directions.
-            for angle in (
-                GLCM_ANGLES_DEGREES
-            ):
-
-                matrix = masked_glcm(
-                    quantized=quantized_patch,
-                    mask=mask_patch,
-                    levels=GLCM_LEVELS,
-                    distance=GLCM_DISTANCE,
-                    angle_degrees=angle,
-                )
-
-                properties = (
-                    calculate_glcm_properties(
-                        matrix
+    result: dict[str, float] = {}
+    if keep_per_distance:
+        for d in distances:
+            for prop in GLCM_PROPERTIES:
+                values = np.asarray(by_distance[int(d)][prop], dtype=float)
+                mean_value = float(np.mean(values)) if values.size else 0.0
+                if include_direction_std:
+                    result[f"{prefix}_d{int(d)}_{prop}_mean"] = mean_value
+                    result[f"{prefix}_d{int(d)}_{prop}_dir_std"] = (
+                        float(np.std(values)) if values.size else 0.0
                     )
+                else:
+                    result[f"{prefix}_d{int(d)}_{prop}"] = mean_value
+    else:
+        # For one-distance baselines, preserve both the mean and directional
+        # variation instead of collapsing everything into only one number.
+        for prop in GLCM_PROPERTIES:
+            values = np.asarray(
+                [v for d in distances for v in by_distance[int(d)][prop]], dtype=float
+            )
+            mean_value = float(np.mean(values)) if values.size else 0.0
+            if include_direction_std:
+                result[f"{prefix}_{prop}_mean"] = mean_value
+                result[f"{prefix}_{prop}_dir_std"] = (
+                    float(np.std(values)) if values.size else 0.0
                 )
-
-                local_contrasts.append(
-                    properties[
-                        "contrast"
-                    ]
-                )
-
-            local_map[
-                row_index,
-                column_index,
-            ] = np.mean(
-                local_contrasts
-            )
-
-            valid_map[
-                row_index,
-                column_index,
-            ] = 1
-
-    # ========================================================
-    # NORMALIZE MAP FOR DISPLAY
-    # ========================================================
-
-    valid_values = local_map[
-        valid_map > 0
-    ]
-
-    if len(
-        valid_values
-    ) > 0:
-
-        # Percentiles prevent one extreme value from
-        # dominating the entire visualization.
-
-        minimum = np.percentile(
-            valid_values,
-            5,
-        )
-
-        maximum = np.percentile(
-            valid_values,
-            95,
-        )
-
-        if maximum > minimum:
-
-            local_map = (
-                local_map
-                - minimum
-            ) / (
-                maximum
-                - minimum
-            )
-
-            local_map = np.clip(
-                local_map,
-                0,
-                1,
-            )
-
-    # Resize the small local map back to 256 x 256.
-    local_map = cv2.resize(
-        local_map,
-        (
-            width,
-            height,
-        ),
-        interpolation=cv2.INTER_CUBIC,
-    )
-
-    # Hide background.
-    local_map[
-        mask == 0
-    ] = np.nan
-
-    return local_map
-
-
-# ============================================================
-# EXTRACT GLCM FEATURES FOR FULL DATASET
-# ============================================================
-
-def extract_glcm_dataset(
-    records: list[ImageRecord],
-) -> tuple[np.ndarray, pd.DataFrame]:
-    """
-    Extract the six global GLCM features from every banana image.
-    """
-
-    feature_rows = []
-    csv_rows = []
-
-    print(
-        "\nExtracting masked GLCM features..."
-    )
-
-    for index, record in enumerate(
-        records,
-        start=1,
-    ):
-
-        processed = preprocess_image(
-            record.path
-        )
-
-        features, _ = (
-            extract_glcm_from_image(
-                processed.gray,
-                processed.mask,
-            )
-        )
-
-        feature_rows.append(
-            features
-        )
-
-        row = {
-            "image_path": str(
-                record.path
-            ),
-            "label": record.label,
-        }
-
-        for name, value in zip(
-            GLCM_PROPERTIES,
-            features,
-        ):
-
-            row[
-                name
-            ] = value
-
-        csv_rows.append(
-            row
-        )
-
-        if (
-            index % 100 == 0
-            or index == len(
-                records
-            )
-        ):
-
-            print(
-                f"  GLCM: "
-                f"{index}/"
-                f"{len(records)} images"
-            )
-
-    return (
-        np.vstack(
-            feature_rows
-        ),
-        pd.DataFrame(
-            csv_rows
-        ),
-    )
+            else:
+                result[f"{prefix}_{prop}"] = mean_value
+    return result

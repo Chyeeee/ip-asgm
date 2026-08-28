@@ -1,1 +1,1 @@
-"""Texture-based banana surface quality analysis."""
+"""Texture-based surface quality analysis."""
