@@ -1,0 +1,5 @@
+,Predicted_Overripe,Predicted_Ripe,Predicted_Rotten,Predicted_Unripe
+Actual_Overripe,61,5,6,7
+Actual_Ripe,4,69,1,5
+Actual_Rotten,27,4,45,3
+Actual_Unripe,1,10,3,63

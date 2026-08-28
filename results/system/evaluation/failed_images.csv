@@ -1,0 +1,7 @@
+image,image_path,actual_fruit,actual_category,error_type,error
+Grape_Rotten_099.jpg,C:\Users\user\Documents\ip-asgm\results\preprocessing\MedianFinal\ProcessedImages\Grape\Rotten\Grape_Rotten_099.jpg,Grape,Rotten,RuntimeError,Fruit ROI could not be detected.
+Grape_Unripe_064.jpg,C:\Users\user\Documents\ip-asgm\results\preprocessing\MedianFinal\ProcessedImages\Grape\Unripe\Grape_Unripe_064.jpg,Grape,Unripe,RuntimeError,Fruit ROI could not be detected.
+Grape_Unripe_005.jpg,C:\Users\user\Documents\ip-asgm\results\preprocessing\MedianFinal\ProcessedImages\Grape\Unripe\Grape_Unripe_005.jpg,Grape,Unripe,RuntimeError,Fruit ROI could not be detected.
+Grape_Ripe_069.jpg,C:\Users\user\Documents\ip-asgm\results\preprocessing\MedianFinal\ProcessedImages\Grape\Ripe\Grape_Ripe_069.jpg,Grape,Ripe,RuntimeError,Fruit ROI could not be detected.
+Banana_Unripe_082.jpg,C:\Users\user\Documents\ip-asgm\results\preprocessing\MedianFinal\ProcessedImages\Banana\Unripe\Banana_Unripe_082.jpg,Banana,Unripe,RuntimeError,Fruit ROI could not be detected.
+Pear_Overripe_034.jpg,C:\Users\user\Documents\ip-asgm\results\preprocessing\MedianFinal\ProcessedImages\Pear\Overripe\Pear_Overripe_034.jpg,Pear,Overripe,RuntimeError,Fruit ROI could not be detected.

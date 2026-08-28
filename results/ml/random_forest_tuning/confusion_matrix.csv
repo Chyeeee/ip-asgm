@@ -1,0 +1,5 @@
+,Unripe,Ripe,Overripe,Rotten
+Unripe,124,16,10,5
+Ripe,25,114,3,8
+Overripe,4,7,112,23
+Rotten,7,8,18,112

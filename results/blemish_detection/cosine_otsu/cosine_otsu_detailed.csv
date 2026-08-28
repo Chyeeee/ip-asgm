@@ -1,0 +1,190 @@
+fruit,category,image,method,intensity_weight,cosine_weight,iou,dice,precision,recall
+Apple,Ripe,Apple_Ripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Apple,Rotten,Apple_Rotten_084.jpg,Original Otsu,,,0.38166862514688604,0.5524749106990985,0.41904270416720424,0.8105814824057899
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.38263343799058086,0.5534850054641707,0.4200831591873667,0.8110390150569836
+Apple,Rotten,Apple_Rotten_084.jpg,Cosine-Guided Otsu + Morphology,,,0.1653650115093719,0.2837995132446827,0.9336272917150151,0.16733216870476667
+Apple,Rotten,Apple_Rotten_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.26447611951061223,0.41831730220887353,0.3852051533398684,0.45765743282588806
+Apple,Rotten,Apple_Rotten_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.286618865816184,0.4455381052326844,0.39428681227182477,0.5121038183179436
+Apple,Rotten,Apple_Rotten_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.3078743117440241,0.4708010685422514,0.3966214676390155,0.5791115547791366
+Apple,Rotten,Apple_Rotten_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.3207622868605817,0.485722964763062,0.40867268699948883,0.5985774893935613
+Banana,Ripe,Banana_Ripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Banana,Overripe,Banana_Overripe_084.jpg,Original Otsu,,,0.3593079141300865,0.5286630209315482,0.3594384375400658,0.9989903789048581
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.3591413230286404,0.5284826779136527,0.3592640447638472,0.9990497683810429
+Banana,Overripe,Banana_Overripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.01088884509262909,0.021543110591217038,0.06007067137809187,0.013125074236845231
+Banana,Overripe,Banana_Overripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.506323785469644,0.6722642108605906,0.5874048258562898,0.7857821594013541
+Banana,Overripe,Banana_Overripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.4617126004693763,0.6317419721511793,0.605683304272014,0.6601437225323673
+Banana,Overripe,Banana_Overripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.3825346066234449,0.5533816004182444,0.5931397520801495,0.5186186007839411
+Banana,Overripe,Banana_Overripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.2990199438009732,0.46037775667405295,0.5645216941257656,0.3886744268915548
+Banana,Rotten,Banana_Rotten_084.jpg,Original Otsu,,,0.2496537556740996,0.39955668446645703,0.2757333567539083,0.7252391860935183
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.24941715652087276,0.3992536123249657,0.2757878656570627,0.7228713881456099
+Banana,Rotten,Banana_Rotten_084.jpg,Cosine-Guided Otsu + Morphology,,,0.1278441231929604,0.22670530539456085,0.26923993328568024,0.19577646447340558
+Banana,Rotten,Banana_Rotten_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.23289654844988844,0.37780387777499663,0.28338018947854887,0.5665967235836525
+Banana,Rotten,Banana_Rotten_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.23288878012969533,0.3777936564646104,0.2878154013649331,0.5496178797620652
+Banana,Rotten,Banana_Rotten_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.23563389830508474,0.38139759459222194,0.3075933683403151,0.5017999114482068
+Banana,Rotten,Banana_Rotten_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.15378115758343897,0.2665690223361406,0.3025399075952771,0.23824282441719444
+Grape,Ripe,Grape_Ripe_094.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.011883916525533198,0.02348869535616011,0.015225066195939982,0.05137113785829507
+Grape,Overripe,Grape_Overripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.031088658191306278,0.060302589780864696,0.03850517413277409,0.13897505894031517
+Grape,Rotten,Grape_Rotten_064.jpg,Original Otsu,,,0.3339821620522356,0.5007295772807457,0.33901503981126513,0.95744149246273
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + Morphology 7x7,,,0.33787592619497314,0.505093065178203,0.341638265366083,0.9684350795369367
+Grape,Rotten,Grape_Rotten_064.jpg,Cosine-Guided Otsu + Morphology,,,0.025383542538354256,0.04951033732317737,0.07139494743448925,0.03789456150578829
+Grape,Rotten,Grape_Rotten_064.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.17346109568632762,0.29564013042098275,0.22618101545253863,0.4266677771300075
+Grape,Rotten,Grape_Rotten_064.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.15677487770670134,0.27105512183581737,0.21014260167820625,0.3816940118264346
+Grape,Rotten,Grape_Rotten_064.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.14139351355093283,0.24775594371664242,0.19481138823978253,0.3402182060464729
+Grape,Rotten,Grape_Rotten_064.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.13031839954916877,0.23058706219618597,0.1842170774209609,0.30815357708003666
+Guava,Class_A,Guava_Class_A_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Guava,Class_B,Guava_Class_B_084.jpg,Original Otsu,,,0.4351953669085844,0.6064614991699655,0.44424904587293274,0.9552659103709068
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + Morphology 7x7,,,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Cosine-Guided Otsu + Morphology,,,0.6557093425605537,0.7920585161964472,0.6815755888154078,0.9452892428996701
+Guava,Class_B,Guava_Class_B_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.5500328181872427,0.7097047388074066,0.6803956303513433,0.7416525866924129
+Guava,Class_B,Guava_Class_B_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.6105350476980506,0.7581766675251095,0.6984815618221258,0.8290288840614691
+Guava,Class_B,Guava_Class_B_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.6439900075524313,0.7834475934695031,0.6985317285273174,0.8918657977311127
+Guava,Class_B,Guava_Class_B_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.650086432833324,0.7879422797472204,0.6792914578720429,0.9379676562877142
+Guava,Defect,Guava_Defect_084.jpg,Original Otsu,,,0.3246177433389964,0.49013044702349295,0.35604235786029176,0.7862304295463669
+Guava,Defect,Guava_Defect_084.jpg,Otsu + Morphology 7x7,,,0.321197276652275,0.48622152395915164,0.35391793605050087,0.7764953833801687
+Guava,Defect,Guava_Defect_084.jpg,Cosine-Guided Otsu + Morphology,,,0.42635985220522893,0.5978292946847231,0.86252247137856,0.4574468085106383
+Guava,Defect,Guava_Defect_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.34822863756188516,0.516572082598121,0.4921399363925488,0.5435568044961863
+Guava,Defect,Guava_Defect_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.35269995407125515,0.521475517182839,0.5046233278573105,0.5394921718185468
+Guava,Defect,Guava_Defect_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.3615296263765962,0.5310639142516872,0.5252257557911268,0.5370333199518266
+Guava,Defect,Guava_Defect_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.4085895329734804,0.5801399533488837,0.8634199563578655,0.4368225612203934
+Mango,Ripe,Mango_Ripe_064.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Mango,Overripe,Mango_Overripe_084.jpg,Original Otsu,,,0.6509676228201212,0.7885892052906073,0.8227931349046397,0.7571155272713075
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.6524382030039738,0.7896672950527335,0.826003538766548,0.7563932378089252
+Mango,Overripe,Mango_Overripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.22079826332025745,0.3617276825406729,0.9000232865015912,0.22634990044118222
+Mango,Overripe,Mango_Overripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.47481292206607045,0.6438957985273188,0.8795091111937523,0.5078475774021005
+Mango,Overripe,Mango_Overripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.4609141705596776,0.6309941813804173,0.8822147415667297,0.4911373130831999
+Mango,Overripe,Mango_Overripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.45140679089636887,0.6220265658500691,0.8883211943327173,0.4785655721703822
+Mango,Overripe,Mango_Overripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.434812734082397,0.6060898732690325,0.9143858543693144,0.45326591965017765
+Mango,Rotten,Mango_Rotten_084.jpg,Original Otsu,,,0.17473071865910508,0.2974821648633676,0.1917588584255251,0.6630380002015925
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.17346638092686847,0.2956478067822534,0.19110507754282932,0.6527063804052011
+Mango,Rotten,Mango_Rotten_084.jpg,Cosine-Guided Otsu + Morphology,,,0.20494916971166022,0.34017894673632376,0.4207516339869281,0.285505493397843
+Mango,Rotten,Mango_Rotten_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.2608983008839809,0.4138292528446939,0.3651570630179225,0.4774720290293317
+Mango,Rotten,Mango_Rotten_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.2597934231572099,0.4124381321282548,0.3598843322818086,0.4829654268722911
+Mango,Rotten,Mango_Rotten_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.2598010375996149,0.41244772761043536,0.3562914878791213,0.48961798205826024
+Mango,Rotten,Mango_Rotten_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.2656026500037642,0.41972517994170483,0.34598411297440423,0.5334139703658906
+Melon,Ripe,Melon_Ripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Melon,Rotten,Melon_Rotten_010.jpg,Original Otsu,,,0.26486373325213153,0.41880200418290425,0.2718482634683752,0.9115739831008056
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + Morphology 7x7,,,0.2670422427256091,0.4215206624068963,0.2740313240455801,0.9128184974127203
+Melon,Rotten,Melon_Rotten_010.jpg,Cosine-Guided Otsu + Morphology,,,0.003288788012136091,0.0065560146817793576,0.011106765741102856,0.0046505534813650355
+Melon,Rotten,Melon_Rotten_010.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.19958850739081582,0.33276161977399066,0.2646927914852443,0.44795965153599265
+Melon,Rotten,Melon_Rotten_010.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.15518989675516223,0.2686829190440091,0.2262008733624454,0.33081155433287485
+Melon,Rotten,Melon_Rotten_010.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.13922937001414765,0.2444272833528135,0.17936896921427478,0.38353966070609813
+Melon,Rotten,Melon_Rotten_010.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.08854650083534435,0.16268758526603003,0.12459513112527426,0.234328944782865
+Orange,Ripe,Orange_Ripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0
+Orange,Overripe,Orange_Overripe_084.jpg,Original Otsu,,,0.4803573961140264,0.6489748994060165,0.5959487100534454,0.712359018850067
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.48090163496948884,0.6494714079769341,0.597991283764352,0.7106501564266372
+Orange,Overripe,Orange_Overripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.013143106177030529,0.025945211682137197,0.09342899070601664,0.01506427951731209
+Orange,Overripe,Orange_Overripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.3952115136325663,0.5665255909530096,0.5872312813857699,0.5472303283644873
+Orange,Overripe,Orange_Overripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.39126296754544587,0.5624572444930908,0.5863977405642884,0.540394878670768
+Orange,Overripe,Orange_Overripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.3865387549588038,0.557559251158888,0.5847037101148231,0.5328233036254174
+Orange,Overripe,Orange_Overripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.3796282129742962,0.5503340818985832,0.5820943667341134,0.5218602939243369
+Orange,Rotten,Orange_Rotten_084.jpg,Original Otsu,,,0.7390036855779107,0.8499161809795968,0.8815791844604213,0.8204487523477327
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.7438697463082166,0.8531253528344002,0.8848253373448394,0.8236181915749933
+Orange,Rotten,Orange_Rotten_084.jpg,Cosine-Guided Otsu + Morphology,,,0.1420894023103968,0.24882360701877831,0.9885847408270239,0.14232291387174673
+Orange,Rotten,Orange_Rotten_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.49967544896226884,0.6663781144220632,0.9852000131263742,0.5034545210625168
+Orange,Rotten,Orange_Rotten_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.547013945448199,0.7071868318416726,0.984121288238988,0.5518848940166353
+Orange,Rotten,Orange_Rotten_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.5349323942726155,0.6970110166006537,0.9826081650088485,0.540045613093641
+Orange,Rotten,Orange_Rotten_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.48258409253082424,0.6510040070739406,0.9788286772130596,0.48767440300509796
+Peach,Ripe,Peach_Ripe_084.jpg,Original Otsu,,,0.1371467459436226,0.2412120448532191,0.1371467459436226,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.22071696540225094,0.3616185760628308,0.23118905545044388,0.8297205536693654
+Peach,Ripe,Peach_Ripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.2314426408900237,0.37588862559241704,0.23175260242284046,0.9942543745103161
+Peach,Ripe,Peach_Ripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.21457581227436823,0.35333457180011146,0.21487883409591593,0.9934708801253591
+Peach,Ripe,Peach_Ripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.15903392946682265,0.27442497656644316,0.15918691706052115,0.9939932097153303
+Peach,Ripe,Peach_Ripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.15810805164417333,0.2730454233863694,0.15840589417280643,0.9882475842256464
+Peach,Overripe,Peach_Overripe_084.jpg,Original Otsu,,,0.09610207655741806,0.17535242129866335,0.09830577877872754,0.810858735117791
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.09610225816784113,0.17535272361992604,0.09830845159836989,0.8106898589884319
+Peach,Overripe,Peach_Overripe_084.jpg,Cosine-Guided Otsu + Morphology,,,0.35720336590049134,0.5263814913448736,0.5189104930675199,0.5340707590982015
+Peach,Overripe,Peach_Overripe_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.15391555696646672,0.26677091930556157,0.16099265990912268,0.7778434518280841
+Peach,Overripe,Peach_Overripe_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.18614883305489852,0.31387095424690775,0.18798022315761342,0.9502659799037406
+Peach,Overripe,Peach_Overripe_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.19121132430765234,0.3210367806380398,0.19141018557639183,0.9945959638605083
+Peach,Overripe,Peach_Overripe_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.20263975155279504,0.3369916074887024,0.2029829594552556,0.9917250696614034
+Peach,Rotten,Peach_Rotten_084.jpg,Original Otsu,,,0.1982574204474552,0.3309095642794711,0.20541177013829567,0.8505736137667304
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.20180024548802108,0.33582992888485397,0.20932754880694143,0.8487571701720842
+Peach,Rotten,Peach_Rotten_084.jpg,Cosine-Guided Otsu + Morphology,,,0.18524470416362307,0.3125847405398743,0.2306293197526373,0.4848948374760994
+Peach,Rotten,Peach_Rotten_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.09113115370161594,0.16703977957637334,0.11935034041506029,0.27820267686424477
+Peach,Rotten,Peach_Rotten_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.12410063372563968,0.22079986435792553,0.14184570977316668,0.4979923518164436
+Peach,Rotten,Peach_Rotten_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.12674280275993338,0.22497202103173766,0.14437488142667426,0.5092734225621415
+Peach,Rotten,Peach_Rotten_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.12341446691806651,0.2197131522734208,0.14230052515669997,0.4818355640535373
+Pear,Ripe,Pear_Ripe_047.jpg,Original Otsu,,,0.059772585846014595,0.11280266473075116,0.06050922585300485,0.8307910048749804
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + Morphology 7x7,,,0.06059054446151221,0.11425812681042806,0.06131190199306859,0.837395816952351
+Pear,Ripe,Pear_Ripe_047.jpg,Cosine-Guided Otsu + Morphology,,,0.12218174138022071,0.21775749305980333,0.15536457633946554,0.3638936939770404
+Pear,Ripe,Pear_Ripe_047.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.03896494478261916,0.07500723672784114,0.04048446366522511,0.5093568171096085
+Pear,Ripe,Pear_Ripe_047.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.03823674135592813,0.07365707614236669,0.039750467872738615,0.5010221732976883
+Pear,Ripe,Pear_Ripe_047.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.13970098662308578,0.24515375219076957,0.185084202085004,0.3629501493945589
+Pear,Ripe,Pear_Ripe_047.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.09781846513439812,0.17820517369859126,0.115067363211438,0.39487340776851704
+Pear,Overripe,Pear_Overripe_032.jpg,Original Otsu,,,0.28167887567128364,0.43954672425064883,0.3319469172189889,0.6503590795837608
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + Morphology 7x7,,,0.2874884944968044,0.4465880599720077,0.3401331329181877,0.6500366407738531
+Pear,Overripe,Pear_Overripe_032.jpg,Cosine-Guided Otsu + Morphology,,,0.0424342786172635,0.08141382049245433,0.26567309249959503,0.04807269529532464
+Pear,Overripe,Pear_Overripe_032.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.34571161904005404,0.5137974795620223,0.5173397521618971,0.510303385607504
+Pear,Overripe,Pear_Overripe_032.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.3541282094311126,0.5230349784676395,0.5546174315844804,0.4948556353510186
+Pear,Overripe,Pear_Overripe_032.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.35902000489552505,0.5283513172760467,0.5984865346093924,0.47292979627729737
+Pear,Overripe,Pear_Overripe_032.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.35225571701632774,0.5209897988725966,0.6216875304828483,0.4483658214861498
+Pear,Rotten,Pear_Rotten_084.jpg,Original Otsu,,,0.07756754936947509,0.1439678643160009,0.1128463476070529,0.1987920621225194
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.07523024253821303,0.13993327114874077,0.10998012152655398,0.192308640453593
+Pear,Rotten,Pear_Rotten_084.jpg,Cosine-Guided Otsu + Morphology,,,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Weighted Otsu-Cosine (0.8/0.2) + Morphology,0.8,0.2,0.00047741242465835175,0.0009543692215926037,0.0009246417013407304,0.0009860717367188463
+Pear,Rotten,Pear_Rotten_084.jpg,Weighted Otsu-Cosine (0.7/0.3) + Morphology,0.7,0.3,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Weighted Otsu-Cosine (0.6/0.4) + Morphology,0.6,0.4,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Weighted Otsu-Cosine (0.5/0.5) + Morphology,0.5,0.5,0.0,0.0,0.0,0.0

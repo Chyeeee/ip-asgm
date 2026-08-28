@@ -1,0 +1,379 @@
+fruit,category,image,method,hsv_k,component_ratio,iou,dice,precision,recall
+Apple,Ripe,Apple_Ripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Apple,Ripe,Apple_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Apple,Overripe,Apple_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Apple,Rotten,Apple_Rotten_084.jpg,Original Otsu,,,0.38166862514688604,0.5524749106990985,0.41904270416720424,0.8105814824057899
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.38263343799058086,0.5534850054641707,0.4200831591873667,0.8110390150569836
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.17477604075180045,0.29754784688995217,0.5293679506277932,0.20692953997171618
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.17497889701744512,0.29784176968898735,0.5312333155365724,0.20692953997171618
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.17409106953759265,0.29655462690156936,0.5349240780911063,0.20514100324432244
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.17409106953759265,0.29655462690156936,0.5349240780911063,0.20514100324432244
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.13217054263565892,0.23348168435467306,0.4637161577450859,0.1560186340570668
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.1323244082266201,0.2337217272104181,0.46561569016881826,0.1560186340570668
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.13041326404355358,0.23073555166374782,0.4649609276531384,0.15343981365942932
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.12588821720224838,0.22362471740768652,0.45618754803996925,0.1481157973546294
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.09995413329569912,0.18174236592250448,0.3971124194000561,0.11783545462107978
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.10007064641469446,0.18193494525254472,0.3989578932544712,0.11783545462107978
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.10028318584070796,0.18228613711675193,0.40235761965629885,0.11783545462107978
+Apple,Rotten,Apple_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0954118689105403,0.1742027298014102,0.391652123327516,0.11201231178770485
+Banana,Ripe,Banana_Ripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Banana,Ripe,Banana_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Banana,Overripe,Banana_Overripe_084.jpg,Original Otsu,,,0.3593079141300865,0.5286630209315482,0.3594384375400658,0.9989903789048581
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.3591413230286404,0.5284826779136527,0.3592640447638472,0.9990497683810429
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.19079575791716671,0.32045085254735806,0.5213143277788931,0.2313220097398741
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.18881753113050298,0.3176560341450339,0.5196653848748567,0.22873856752583444
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.1842635849520531,0.3111867785067685,0.517255659856433,0.22253236726452072
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.17843619375461028,0.3028355624178438,0.5092274226370079,0.21549471433661954
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.19189082668243176,0.32199396519654444,0.5295717199184229,0.2313220097398741
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.18990212755466804,0.3191894915675631,0.5279643591501028,0.22873856752583444
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.18532073791977843,0.31269298172410914,0.5256734006734006,0.22253236726452072
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.17945991394233146,0.30430862773875667,0.5176546115985449,0.21549471433661954
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.1930224490807275,0.3235856110326493,0.5382808181315644,0.2313220097398741
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.19102293862368258,0.3207712167902057,0.5367196209587514,0.22873856752583444
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.18641791044776118,0.3142533652031702,0.5345983735197604,0.22253236726452072
+Banana,Overripe,Banana_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.1805223880597015,0.3058347556735571,0.526594586749873,0.21549471433661954
+Banana,Rotten,Banana_Rotten_084.jpg,Original Otsu,,,0.2496537556740996,0.39955668446645703,0.2757333567539083,0.7252391860935183
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.24941715652087276,0.3992536123249657,0.2757878656570627,0.7228713881456099
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.18355043599956938,0.31016918319083137,0.7298280659199543,0.1969314878626292
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.18097652177039514,0.30648623140973924,0.7323585042921578,0.19379367432190503
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.1831129381377667,0.30954430846811387,0.7686493090020615,0.19379367432190503
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.15989452674369634,0.27570528708776026,0.7662337662337663,0.1680944039116792
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.163004061502756,0.2803155498737177,0.7371873718737187,0.17306100448534084
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.16020992018659572,0.27617402230249727,0.7499786744007506,0.16924942730090284
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.15688633839318772,0.2712216977358189,0.8034698521046644,0.163147053727838
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.14126235232929638,0.24755456454159275,0.8010322308826627,0.14639921458409533
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.13916783611875558,0.2443324534037277,0.7232430384542528,0.14699597666852754
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.13674367436743676,0.24058840607761542,0.7420157198288727,0.14356940728049744
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.12917958524404508,0.22880255175021785,0.7840883479828713,0.1339442123703005
+Banana,Rotten,Banana_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.11009849428280312,0.19835806435163938,0.8473714783618937,0.11232602460199818
+Grape,Ripe,Grape_Ripe_094.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Grape,Ripe,Grape_Ripe_094.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Grape,Overripe,Grape_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Grape,Rotten,Grape_Rotten_064.jpg,Original Otsu,,,0.3339821620522356,0.5007295772807457,0.33901503981126513,0.95744149246273
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + Morphology 7x7,,,0.33787592619497314,0.505093065178203,0.341638265366083,0.9684350795369367
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.21275466188864556,0.35086183310533514,0.51148691767709,0.26701091030232366
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.21275466188864556,0.35086183310533514,0.51148691767709,0.26701091030232366
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.2110268688480979,0.348508979076281,0.5116091583360206,0.26426251353377195
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.20836658685820697,0.3448731355605702,0.5084388185654009,0.26093112351128506
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.15752271962302256,0.27217214306484444,0.4510408635312259,0.19488631631548264
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.15752271962302256,0.27217214306484444,0.4510408635312259,0.19488631631548264
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.1578734313857779,0.2726954900361263,0.4539282250242483,0.19488631631548264
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.15166711846028735,0.2633870777921619,0.4487667936635252,0.18639127175814107
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.05847445361123173,0.11048817174894024,0.30851470026727756,0.06729407845423503
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.05847445361123173,0.11048817174894024,0.30851470026727756,0.06729407845423503
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.05666278731451847,0.10724857162524953,0.30912698412698414,0.06487882068793203
+Grape,Rotten,Grape_Rotten_064.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.057427202359012164,0.10861684327941996,0.3333333333333333,0.06487882068793203
+Guava,Class_A,Guava_Class_A_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Guava,Class_A,Guava_Class_A_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Guava,Class_B,Guava_Class_B_084.jpg,Original Otsu,,,0.4351953669085844,0.6064614991699655,0.44424904587293274,0.9552659103709068
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + Morphology 7x7,,,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Class_B,Guava_Class_B_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.4412480637309139,0.6123138338707201,0.4489474276708319,0.9625874969828626
+Guava,Defect,Guava_Defect_084.jpg,Original Otsu,,,0.3246177433389964,0.49013044702349295,0.35604235786029176,0.7862304295463669
+Guava,Defect,Guava_Defect_084.jpg,Otsu + Morphology 7x7,,,0.321197276652275,0.48622152395915164,0.35391793605050087,0.7764953833801687
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.39267042674289837,0.5639100525186774,0.4464975986880637,0.7651043757527097
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.3918205464987509,0.5630331402771867,0.44596218672138355,0.7634484142914492
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.38919364392593164,0.5603159007063273,0.4443007085526122,0.758329987956644
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.38615467820443483,0.557159578618806,0.44236613069774305,0.752408671216379
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.39069018323916144,0.5618651629929183,0.451913386067251,0.7425230830991569
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.38981887310556057,0.5609635624453817,0.45136044023234484,0.7408671216378965
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.38712573269261236,0.5581696360590833,0.449644259077527,0.7357486953030912
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.3840101388815546,0.5549238811095425,0.4476454293628809,0.7298273785628262
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.40213992713921,0.5736088379705401,0.4842152528322741,0.7034825371336813
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.4011933105762887,0.5726451982721559,0.4836266814205194,0.7018265756724207
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.39846820228909097,0.5698638004594684,0.481924784901471,0.697059413890004
+Guava,Defect,Guava_Defect_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.39716823346213737,0.5685331572103774,0.4828734705325527,0.6911380971497391
+Mango,Ripe,Mango_Ripe_064.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Mango,Ripe,Mango_Ripe_064.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Mango,Overripe,Mango_Overripe_084.jpg,Original Otsu,,,0.6509676228201212,0.7885892052906073,0.8227931349046397,0.7571155272713075
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.6524382030039738,0.7896672950527335,0.826003538766548,0.7563932378089252
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.40334713394367017,0.5748358680295853,0.9894621399961854,0.4050872603755905
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.40334713394367017,0.5748358680295853,0.9894621399961854,0.4050872603755905
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.40334713394367017,0.5748358680295853,0.9894621399961854,0.4050872603755905
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.38931327385464654,0.560439867927696,0.9890864197530864,0.39099285519072347
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.3902453248318495,0.5614049806339751,0.9893548864028388,0.39189083668449615
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.3902453248318495,0.5614049806339751,0.9893548864028388,0.39189083668449615
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.3902453248318495,0.5614049806339751,0.9893548864028388,0.39189083668449615
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.3773181447066599,0.5479026703551064,0.9889941913787832,0.37890914769843437
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.38072003421328876,0.551480422937756,0.9890914600272713,0.38232538164213486
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.38072003421328876,0.551480422937756,0.9890914600272713,0.38232538164213486
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.37945647525368376,0.5501536033369973,0.9890555330360762,0.3810564947487604
+Mango,Overripe,Mango_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.36769565724505265,0.5376863709367938,0.9887094244942763,0.36924608597196734
+Mango,Rotten,Mango_Rotten_084.jpg,Original Otsu,,,0.17473071865910508,0.2974821648633676,0.1917588584255251,0.6630380002015925
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.17346638092686847,0.2956478067822534,0.19110507754282932,0.6527063804052011
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.2267671016904616,0.3696987005569042,0.3502435064935065,0.39144239491986693
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.2267671016904616,0.3696987005569042,0.3502435064935065,0.39144239491986693
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.2232343581209308,0.36499033343676157,0.3466787576513262,0.38534421933272855
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.20732241394411843,0.3434416715031921,0.3301255230125523,0.35787723011793166
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.2267671016904616,0.3696987005569042,0.3502435064935065,0.39144239491986693
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.2267671016904616,0.3696987005569042,0.3502435064935065,0.39144239491986693
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.2232343581209308,0.36499033343676157,0.3466787576513262,0.38534421933272855
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.20732241394411843,0.3434416715031921,0.3301255230125523,0.35787723011793166
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.2267671016904616,0.3696987005569042,0.3502435064935065,0.39144239491986693
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.2267671016904616,0.3696987005569042,0.3502435064935065,0.39144239491986693
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.2232343581209308,0.36499033343676157,0.3466787576513262,0.38534421933272855
+Mango,Rotten,Mango_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.20732241394411843,0.3434416715031921,0.3301255230125523,0.35787723011793166
+Melon,Ripe,Melon_Ripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Melon,Ripe,Melon_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Melon,Overripe,Melon_Overripe_014.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Melon,Rotten,Melon_Rotten_010.jpg,Original Otsu,,,0.26486373325213153,0.41880200418290425,0.2718482634683752,0.9115739831008056
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + Morphology 7x7,,,0.2670422427256091,0.4215206624068963,0.2740313240455801,0.9128184974127203
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.058678353131126744,0.11085208828079043,0.16557110315652457,0.08331695814501867
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.05805243445692884,0.10973451327433628,0.16486113846759898,0.08223619571625074
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.05582968471285936,0.10575509577199026,0.16020740543774514,0.07892840767668828
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0362082146083814,0.0698859825620389,0.11010143702451394,0.051188838671644726
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.05855739703227924,0.11063622472706336,0.17082677973056146,0.08181044082006943
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.05778382053025153,0.10925449871465295,0.16895133653187114,0.0807296783913015
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.05541620759980309,0.10501299335894987,0.1631582579888191,0.07742189035173905
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.027407858951514583,0.05335341502932384,0.0879807330473395,0.038285190279688214
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.058454820762025496,0.11045312396034333,0.17109874252731397,0.08154843780703479
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.05768011831819142,0.10906911705952857,0.16921487603305785,0.08046767537826685
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.05530905932342653,0.10482059039441194,0.16339551980026354,0.0771598873387044
+Melon,Rotten,Melon_Rotten_010.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.027446468820435763,0.053426567034574164,0.08837982913737052,0.038285190279688214
+Orange,Ripe,Orange_Ripe_084.jpg,Original Otsu,,,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Orange,Ripe,Orange_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Orange,Overripe,Orange_Overripe_084.jpg,Original Otsu,,,0.4803573961140264,0.6489748994060165,0.5959487100534454,0.712359018850067
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.48090163496948884,0.6494714079769341,0.597991283764352,0.7106501564266372
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.005081603222926729,0.010111822177685668,0.03780653950953679,0.005836422430791072
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.005081603222926729,0.010111822177685668,0.03780653950953679,0.005836422430791072
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.005081603222926729,0.010111822177685668,0.03780653950953679,0.005836422430791072
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.002730735692321814,0.005446598164633728,0.021024734982332156,0.003128532744433052
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0018571826539140125,0.003707479840578367,0.015628052353975387,0.002103215290375161
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0018571826539140125,0.003707479840578367,0.015628052353975387,0.002103215290375161
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0018571826539140125,0.003707479840578367,0.015628052353975387,0.002103215290375161
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0018571826539140125,0.003707479840578367,0.015628052353975387,0.002103215290375161
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0008263877411281373,0.0016514107766348967,0.008044127786715698,0.0009201566895391329
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0008263877411281373,0.0016514107766348967,0.008044127786715698,0.0009201566895391329
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0008263877411281373,0.0016514107766348967,0.008044127786715698,0.0009201566895391329
+Orange,Overripe,Orange_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0008263877411281373,0.0016514107766348967,0.008044127786715698,0.0009201566895391329
+Orange,Rotten,Orange_Rotten_084.jpg,Original Otsu,,,0.7390036855779107,0.8499161809795968,0.8815791844604213,0.8204487523477327
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.7438697463082166,0.8531253528344002,0.8848253373448394,0.8236181915749933
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.45852373169674127,0.6287504573728504,0.988139735480161,0.46106117520794204
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.4564390780827858,0.6267877386037032,0.9880862124986461,0.45896498524282264
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.4564390780827858,0.6267877386037032,0.9880862124986461,0.45896498524282264
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.4497181548313932,0.6204214982514265,0.9879103165298945,0.4522068687952777
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.4575397751909543,0.6278247537100816,0.9881145326850351,0.4600717735444057
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.45545512157699874,0.625859382161518,0.9880607814761215,0.4579755835792863
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.45545512157699874,0.625859382161518,0.9880607814761215,0.4579755835792863
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.44873419832560624,0.619484511160483,0.9878841282079525,0.4512174671317413
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.45627230579366934,0.626630478349996,0.9880819097836686,0.4587972900456131
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.4541876521797138,0.6246616817285197,0.9880278624292556,0.4567011000804937
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.4541876521797138,0.6246616817285197,0.9880278624292556,0.4567011000804937
+Orange,Rotten,Orange_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.4474667289283213,0.6182756673925317,0.9878502264275983,0.44994298363294877
+Peach,Ripe,Peach_Ripe_084.jpg,Original Otsu,,,0.1371467459436226,0.2412120448532191,0.1371467459436226,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + Morphology 7x7,,,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Ripe,Peach_Ripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.13995906133489291,0.24555103087825056,0.13995906133489291,1.0
+Peach,Overripe,Peach_Overripe_084.jpg,Original Otsu,,,0.09610207655741806,0.17535242129866335,0.09830577877872754,0.810858735117791
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + Morphology 7x7,,,0.09610225816784113,0.17535272361992604,0.09830845159836989,0.8106898589884319
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.1650081199682112,0.28327376803642135,0.1718114768843317,0.8064679557544541
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.1650081199682112,0.28327376803642135,0.1718114768843317,0.8064679557544541
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.16539960169711662,0.2838504517356158,0.17223594755919427,0.8064679557544541
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.16539960169711662,0.2838504517356158,0.17223594755919427,0.8064679557544541
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.1661902105703528,0.2850139009297181,0.17315970141121342,0.8050325086549016
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.1661902105703528,0.2850139009297181,0.17315970141121342,0.8050325086549016
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.16658803795145988,0.28559874185576273,0.1735916390517461,0.8050325086549016
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.16658803795145988,0.28559874185576273,0.1735916390517461,0.8050325086549016
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.16697022767075306,0.28616021850706846,0.17400667992918545,0.8050325086549016
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.16697022767075306,0.28616021850706846,0.17400667992918545,0.8050325086549016
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.16737180274915295,0.28674977818548203,0.17444285871116477,0.8050325086549016
+Peach,Overripe,Peach_Overripe_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.16737180274915295,0.28674977818548203,0.17444285871116477,0.8050325086549016
+Peach,Rotten,Peach_Rotten_084.jpg,Original Otsu,,,0.1982574204474552,0.3309095642794711,0.20541177013829567,0.8505736137667304
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.20180024548802108,0.33582992888485397,0.20932754880694143,0.8487571701720842
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.20908359932750176,0.3458546612389666,0.21911546907716664,0.8203632887189293
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.20958917493038934,0.34654604931042143,0.21967078821391087,0.8203632887189293
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.21154225421556058,0.34921151693966834,0.22181724182499676,0.8203632887189293
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.21154225421556058,0.34921151693966834,0.22181724182499676,0.8203632887189293
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.19880119880119881,0.33166666666666667,0.21060918946824986,0.780019120458891
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.19928191099604317,0.33233539031791615,0.2111487797934836,0.780019120458891
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.20113894093284687,0.3349136957904891,0.21323471761231477,0.780019120458891
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.20113894093284687,0.3349136957904891,0.21323471761231477,0.780019120458891
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.19504885358543894,0.3264282510296456,0.2074586637640595,0.7652963671128107
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.19552049240388844,0.3270884834617035,0.2079923090913815,0.7652963671128107
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.19734247115669065,0.32963412876526177,0.21005536749849116,0.7652963671128107
+Peach,Rotten,Peach_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.19734247115669065,0.32963412876526177,0.21005536749849116,0.7652963671128107
+Pear,Ripe,Pear_Ripe_047.jpg,Original Otsu,,,0.059772585846014595,0.11280266473075116,0.06050922585300485,0.8307910048749804
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + Morphology 7x7,,,0.06059054446151221,0.11425812681042806,0.06131190199306859,0.837395816952351
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Pear,Ripe,Pear_Ripe_047.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0
+Pear,Overripe,Pear_Overripe_032.jpg,Original Otsu,,,0.28167887567128364,0.43954672425064883,0.3319469172189889,0.6503590795837608
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + Morphology 7x7,,,0.2874884944968044,0.4465880599720077,0.3401331329181877,0.6500366407738531
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.32865350156097023,0.4947166453478672,0.470549340104208,0.5215008060970248
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.33017222180981365,0.4964352982211371,0.4736687965921193,0.5215008060970248
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.33213232274203786,0.4986476449402301,0.4777133344073895,0.5215008060970248
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.33533126001319385,0.5022443045478926,0.48435926057009066,0.5215008060970248
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.3313822350638457,0.4978017977653944,0.47650574959122954,0.5210904294298696
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.3329462663645047,0.49956442321202754,0.4797463230333288,0.5210904294298696
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.334928500103623,0.5017924182120981,0.4838727238084869,0.5210904294298696
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.33818437773465737,0.5054376412720527,0.4906978028044606,0.5210904294298696
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.33291419563095864,0.49952832181124424,0.4806275062317113,0.519976549904734
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.33402376334569833,0.5007763317618497,0.48294356265824506,0.519976549904734
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.33655232602261514,0.5036126449671384,0.48824727512936256,0.519976549904734
+Pear,Overripe,Pear_Overripe_032.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.3398471176504397,0.5072923816060398,0.49521230563077523,0.519976549904734
+Pear,Rotten,Pear_Rotten_084.jpg,Original Otsu,,,0.07756754936947509,0.1439678643160009,0.1128463476070529,0.1987920621225194
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + Morphology 7x7,,,0.07523024253821303,0.13993327114874077,0.10998012152655398,0.192308640453593
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morphology,0.5,,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0005),0.5,0.0005,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.001),0.5,0.001,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=0.5) + Morph + Components(0.0025),0.5,0.0025,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morphology,0.75,,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0005),0.75,0.0005,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.001),0.75,0.001,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=0.75) + Morph + Components(0.0025),0.75,0.0025,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morphology,1.0,,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0005),1.0,0.0005,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.001),1.0,0.001,0.0,0.0,0.0,0.0
+Pear,Rotten,Pear_Rotten_084.jpg,Otsu + HSV(k=1.0) + Morph + Components(0.0025),1.0,0.0025,0.0,0.0,0.0,0.0

@@ -1,0 +1,10 @@
+,Apple,Banana,Grape,Guava,Mango,Melon,Orange,Peach,Pear
+Apple,65,3,0,0,2,1,5,1,3
+Banana,0,74,0,0,1,1,1,0,3
+Grape,0,3,69,0,0,0,0,0,0
+Guava,0,1,0,59,0,0,0,0,0
+Mango,3,5,1,1,67,0,1,0,2
+Melon,0,3,0,0,0,49,1,0,2
+Orange,2,3,1,1,3,1,68,0,1
+Peach,2,0,1,0,0,0,1,75,1
+Pear,0,4,0,1,1,0,0,0,63

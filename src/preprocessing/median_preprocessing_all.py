@@ -18,12 +18,12 @@ IMAGE_SIZE = (600, 600)
 # Median filter selected from filter comparison
 MEDIAN_KERNEL_SIZE = 5
 
-# Smaller size ONLY for GrabCut segmentation.
-# This makes ROI generation much faster.
-SEGMENTATION_SIZE = (300, 300)
+# ROI segmentation size.
+# Final version uses full 600x600 resolution for better mask quality.
+SEGMENTATION_SIZE = (600, 600)
 
-# Reduce GrabCut from 5 iterations to 2
-GRABCUT_ITERATIONS = 2
+# Use 5 GrabCut iterations for more stable final ROI segmentation
+GRABCUT_ITERATIONS = 5
 
 # Progress report frequency
 PROGRESS_INTERVAL = 50
@@ -81,21 +81,20 @@ def median_filter(image):
 # ============================================================
 
 def create_roi_mask(image):
-
     """
-    Create fruit ROI mask using GrabCut.
+    Create a more robust single-fruit ROI mask.
 
-    For speed:
-    1. Resize 600x600 image to 300x300.
-    2. Run GrabCut on smaller image.
-    3. Clean mask.
-    4. Resize mask back to 600x600.
+    IMPORTANT:
+    - The saved/feature-extraction image is still the Median-filtered image.
+    - CLAHE is used ONLY to help ROI segmentation.
+    - GrabCut remains the main foreground segmentation method.
+    - The function is designed for one dominant fruit per image.
     """
 
     original_height, original_width = image.shape[:2]
 
     # --------------------------------------------------------
-    # Resize temporarily for segmentation
+    # 1. SEGMENTATION-SCALE IMAGE
     # --------------------------------------------------------
 
     small_image = cv2.resize(
@@ -107,13 +106,159 @@ def create_roi_mask(image):
     height, width = small_image.shape[:2]
 
     # --------------------------------------------------------
-    # Create GrabCut mask
+    # 2. SEGMENTATION-ONLY CLAHE
+    # --------------------------------------------------------
+    # Improve local contrast without replacing the Median-filtered
+    # image used later for feature extraction.
     # --------------------------------------------------------
 
-    mask = np.zeros(
-        (height, width),
-        np.uint8
+    lab = cv2.cvtColor(
+        small_image,
+        cv2.COLOR_BGR2LAB
     )
+
+    l_channel, a_channel, b_channel = cv2.split(
+        lab
+    )
+
+    clahe = cv2.createCLAHE(
+        clipLimit=2.0,
+        tileGridSize=(8, 8)
+    )
+
+    l_enhanced = clahe.apply(
+        l_channel
+    )
+
+    enhanced_lab = cv2.merge(
+        (
+            l_enhanced,
+            a_channel,
+            b_channel
+        )
+    )
+
+    segmentation_image = cv2.cvtColor(
+        enhanced_lab,
+        cv2.COLOR_LAB2BGR
+    )
+
+    # --------------------------------------------------------
+    # 3. INITIAL GRABCUT MASK
+    # --------------------------------------------------------
+    # Border pixels are definite background.
+    # A broad central ellipse is probable foreground.
+    # This gives GrabCut more information than one huge rectangle.
+    # --------------------------------------------------------
+
+    grabcut_mask = np.full(
+        (height, width),
+        cv2.GC_PR_BGD,
+        dtype=np.uint8
+    )
+
+    border_x = max(
+        5,
+        int(width * 0.04)
+    )
+
+    border_y = max(
+        5,
+        int(height * 0.04)
+    )
+
+    grabcut_mask[
+        :border_y,
+        :
+    ] = cv2.GC_BGD
+
+    grabcut_mask[
+        height - border_y:,
+        :
+    ] = cv2.GC_BGD
+
+    grabcut_mask[
+        :,
+        :border_x
+    ] = cv2.GC_BGD
+
+    grabcut_mask[
+        :,
+        width - border_x:
+    ] = cv2.GC_BGD
+
+    centre = (
+        width // 2,
+        height // 2
+    )
+
+    axes = (
+        max(1, int(width * 0.38)),
+        max(1, int(height * 0.38))
+    )
+
+    probable_foreground = np.zeros(
+        (height, width),
+        dtype=np.uint8
+    )
+
+    cv2.ellipse(
+        probable_foreground,
+        centre,
+        axes,
+        0,
+        0,
+        360,
+        255,
+        thickness=cv2.FILLED
+    )
+
+    grabcut_mask[
+        probable_foreground > 0
+    ] = cv2.GC_PR_FGD
+
+    # --------------------------------------------------------
+    # 4. COLOUR-BASED FOREGROUND SEED
+    # --------------------------------------------------------
+    # Highly saturated pixels are useful probable-foreground seeds
+    # for many fruits, but are NOT treated as definite fruit.
+    # --------------------------------------------------------
+
+    hsv = cv2.cvtColor(
+        segmentation_image,
+        cv2.COLOR_BGR2HSV
+    )
+
+    saturation = hsv[:, :, 1]
+
+    saturation_values = saturation[
+        probable_foreground > 0
+    ]
+
+    if saturation_values.size > 0:
+
+        saturation_threshold = max(
+            35,
+            int(
+                np.percentile(
+                    saturation_values,
+                    55
+                )
+            )
+        )
+
+        colour_seed = (
+            (saturation >= saturation_threshold)
+            & (probable_foreground > 0)
+        )
+
+        grabcut_mask[
+            colour_seed
+        ] = cv2.GC_PR_FGD
+
+    # --------------------------------------------------------
+    # 5. GRABCUT WITH MASK INITIALISATION
+    # --------------------------------------------------------
 
     background_model = np.zeros(
         (1, 65),
@@ -125,118 +270,255 @@ def create_roi_mask(image):
         np.float64
     )
 
-    # 5% margin
-    margin_x = max(
-        1,
-        int(width * 0.05)
-    )
-
-    margin_y = max(
-        1,
-        int(height * 0.05)
-    )
-
-    rectangle = (
-        margin_x,
-        margin_y,
-        width - (2 * margin_x),
-        height - (2 * margin_y)
-    )
-
-    # --------------------------------------------------------
-    # GrabCut
-    # --------------------------------------------------------
-
     cv2.grabCut(
-        small_image,
-        mask,
-        rectangle,
+        segmentation_image,
+        grabcut_mask,
+        None,
         background_model,
         foreground_model,
         GRABCUT_ITERATIONS,
-        cv2.GC_INIT_WITH_RECT
+        cv2.GC_INIT_WITH_MASK
     )
 
-    # --------------------------------------------------------
-    # Convert GrabCut classes to binary
-    #
-    # Fruit      = 255
-    # Background = 0
-    # --------------------------------------------------------
-
     binary_mask = np.where(
-        (mask == cv2.GC_FGD)
-        | (mask == cv2.GC_PR_FGD),
+        (
+            grabcut_mask == cv2.GC_FGD
+        )
+        | (
+            grabcut_mask == cv2.GC_PR_FGD
+        ),
         255,
         0
     ).astype(np.uint8)
 
     # --------------------------------------------------------
-    # Morphological cleaning
+    # 6. MORPHOLOGICAL CLEANING
     # --------------------------------------------------------
 
-    kernel = np.ones(
-        (5, 5),
-        np.uint8
+    open_kernel = cv2.getStructuringElement(
+        cv2.MORPH_ELLIPSE,
+        (5, 5)
+    )
+
+    close_kernel = cv2.getStructuringElement(
+        cv2.MORPH_ELLIPSE,
+        (9, 9)
     )
 
     binary_mask = cv2.morphologyEx(
         binary_mask,
         cv2.MORPH_OPEN,
-        kernel
+        open_kernel,
+        iterations=1
     )
 
     binary_mask = cv2.morphologyEx(
         binary_mask,
         cv2.MORPH_CLOSE,
-        kernel
+        close_kernel,
+        iterations=2
     )
 
     # --------------------------------------------------------
-    # Keep largest contour
+    # 7. COMPONENT VALIDATION
+    # --------------------------------------------------------
+    # Do NOT blindly keep the largest component.
+    # Score components by:
+    # - area,
+    # - closeness to image centre,
+    # - border contact.
+    #
+    # This reduces the chance of selecting a large background region.
+    # --------------------------------------------------------
+
+    number_labels, labels, stats, centroids = (
+        cv2.connectedComponentsWithStats(
+            binary_mask,
+            connectivity=8
+        )
+    )
+
+    image_area = float(
+        height * width
+    )
+
+    image_centre = np.array(
+        [
+            width / 2.0,
+            height / 2.0
+        ],
+        dtype=np.float32
+    )
+
+    best_label = None
+    best_score = -np.inf
+
+    for label_index in range(
+        1,
+        number_labels
+    ):
+
+        area = float(
+            stats[
+                label_index,
+                cv2.CC_STAT_AREA
+            ]
+        )
+
+        area_ratio = (
+            area / image_area
+        )
+
+        # Reject tiny noise and implausibly huge foreground regions.
+        if (
+            area_ratio < 0.01
+            or area_ratio > 0.85
+        ):
+            continue
+
+        centroid = centroids[
+            label_index
+        ]
+
+        distance = np.linalg.norm(
+            centroid - image_centre
+        )
+
+        max_distance = np.hypot(
+            width / 2.0,
+            height / 2.0
+        )
+
+        centre_score = (
+            1.0
+            - min(
+                distance / max_distance,
+                1.0
+            )
+        )
+
+        component = (
+            labels == label_index
+        )
+
+        touches_border = (
+            np.any(component[0, :])
+            or np.any(component[-1, :])
+            or np.any(component[:, 0])
+            or np.any(component[:, -1])
+        )
+
+        border_penalty = (
+            0.40
+            if touches_border
+            else 0.0
+        )
+
+        # sqrt prevents area from completely dominating the score.
+        area_score = np.sqrt(
+            area_ratio
+        )
+
+        score = (
+            (0.60 * area_score)
+            + (0.40 * centre_score)
+            - border_penalty
+        )
+
+        if score > best_score:
+
+            best_score = score
+            best_label = label_index
+
+    # --------------------------------------------------------
+    # 8. FALLBACK
+    # --------------------------------------------------------
+    # If validation rejects every component, use the largest
+    # non-background component rather than returning an empty mask.
+    # --------------------------------------------------------
+
+    if best_label is None:
+
+        if number_labels > 1:
+
+            component_areas = stats[
+                1:,
+                cv2.CC_STAT_AREA
+            ]
+
+            best_label = (
+                int(
+                    np.argmax(
+                        component_areas
+                    )
+                )
+                + 1
+            )
+
+        else:
+
+            return np.zeros(
+                (
+                    original_height,
+                    original_width
+                ),
+                dtype=np.uint8
+            )
+
+    clean_mask = np.where(
+        labels == best_label,
+        255,
+        0
+    ).astype(np.uint8)
+
+    # --------------------------------------------------------
+    # 9. FILL INTERNAL HOLES
     # --------------------------------------------------------
 
     contours, _ = cv2.findContours(
-        binary_mask,
+        clean_mask,
         cv2.RETR_EXTERNAL,
         cv2.CHAIN_APPROX_SIMPLE
     )
 
+    filled_mask = np.zeros_like(
+        clean_mask
+    )
+
     if contours:
 
-        largest_contour = max(
-            contours,
-            key=cv2.contourArea
-        )
-
-        clean_mask = np.zeros_like(
-            binary_mask
-        )
-
         cv2.drawContours(
-            clean_mask,
-            [largest_contour],
+            filled_mask,
+            contours,
             -1,
             255,
             thickness=cv2.FILLED
         )
 
-        binary_mask = clean_mask
+    else:
+
+        filled_mask = clean_mask
 
     # --------------------------------------------------------
-    # Resize mask back to original 600x600
-    #
-    # IMPORTANT:
-    # INTER_NEAREST prevents creation of grey mask pixels.
+    # 10. RESIZE TO ORIGINAL IMAGE SIZE
     # --------------------------------------------------------
 
-    binary_mask = cv2.resize(
-        binary_mask,
-        (original_width, original_height),
+    final_mask = cv2.resize(
+        filled_mask,
+        (
+            original_width,
+            original_height
+        ),
         interpolation=cv2.INTER_NEAREST
     )
 
-    return binary_mask
+    final_mask = np.where(
+        final_mask > 0,
+        255,
+        0
+    ).astype(np.uint8)
+
+    return final_mask
 
 
 # ============================================================

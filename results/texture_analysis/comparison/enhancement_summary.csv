@@ -1,2 +1,2 @@
 best_baseline,baseline_accuracy,baseline_macro_f1,proposed_method,proposed_accuracy,proposed_macro_f1,accuracy_change_percentage_points,macro_f1_change_percentage_points,improved
-Colour_Texture_Fusion,0.7473363774733638,0.7361468747537487,Proposed_PTD_Plus,0.7640791476407914,0.7587857356945831,1.6742770167427645,2.2638860940834338,True
+Colour_Texture_Fusion,0.726027397260274,0.7086617285971212,Proposed_PTD_Plus,0.7503805175038052,0.7379854178640248,2.43531202435312,2.932368926690365,True

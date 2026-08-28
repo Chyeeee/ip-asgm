@@ -1,0 +1,10 @@
+,Predicted_Apple,Predicted_Banana,Predicted_Grape,Predicted_Guava,Predicted_Mango,Predicted_Melon,Predicted_Orange,Predicted_Peach,Predicted_Pear
+Actual_Apple,40,0,0,0,0,0,0,0,0
+Actual_Banana,0,38,0,0,0,0,1,0,0
+Actual_Grape,1,2,31,0,1,0,0,0,1
+Actual_Guava,0,1,0,29,0,0,0,0,0
+Actual_Mango,2,1,0,0,37,0,0,0,0
+Actual_Melon,2,7,1,0,0,28,0,1,1
+Actual_Orange,0,0,0,0,1,0,39,0,0
+Actual_Peach,1,0,0,0,0,0,0,39,0
+Actual_Pear,4,5,0,0,3,0,1,0,26

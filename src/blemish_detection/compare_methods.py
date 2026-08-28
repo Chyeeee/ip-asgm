@@ -1,293 +1,668 @@
+import os
 import cv2
-import csv
-from pathlib import Path
-
-from fruit_mask import create_banana_mask
-from otsu import otsu_segmentation
-from adaptive import adaptive_segmentation
-from colour_segmentation import colour_segmentation
-from evaluation import calculate_metrics
+import numpy as np
+import pandas as pd
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+# ============================================================
+# SETTINGS
+# ============================================================
 
-image_folder = PROJECT_ROOT / "data" / "quality" / "defect"
-ground_truth_folder = PROJECT_ROOT / "data" / "quality" / "ground_truth"
+CSV_PATH = "results/texture_analysis/colour_texture_features.csv"
 
-results_folder = (
-    PROJECT_ROOT
-    / "results"
-    / "blemish_detection"
+PROCESSED_ROOT = (
+    "results/preprocessing/MedianFinal/ProcessedImages"
 )
 
-results_folder.mkdir(parents=True, exist_ok=True)
-
-csv_path = results_folder / "baseline_comparison.csv"
-
-
-# --------------------------------------------------
-# Get all defect images
-# --------------------------------------------------
-
-image_files = (
-    list(image_folder.glob("*.jpg"))
-    + list(image_folder.glob("*.jpeg"))
-    + list(image_folder.glob("*.png"))
+MASK_ROOT = (
+    "results/preprocessing/MedianFinal/ROIMasks"
 )
 
-if not image_files:
-    print("No defect images found.")
-    exit()
+OUTPUT_ROOT = "results/blemish_detection/method_comparison"
+
+os.makedirs(OUTPUT_ROOT, exist_ok=True)
 
 
-# --------------------------------------------------
-# Store results
-# --------------------------------------------------
+# ============================================================
+# LOAD DATA
+# ============================================================
 
-all_results = []
-
-method_totals = {
-    "Otsu": {
-        "IoU": 0,
-        "Dice": 0,
-        "Precision": 0,
-        "Recall": 0
-    },
-
-    "Adaptive": {
-        "IoU": 0,
-        "Dice": 0,
-        "Precision": 0,
-        "Recall": 0
-    },
-
-    "Colour-Based": {
-        "IoU": 0,
-        "Dice": 0,
-        "Precision": 0,
-        "Recall": 0
-    }
-}
-
-method_counts = {
-    "Otsu": 0,
-    "Adaptive": 0,
-    "Colour-Based": 0
-}
+df = pd.read_csv(CSV_PATH)
 
 
-# --------------------------------------------------
-# Evaluate annotated images
-# --------------------------------------------------
+# ============================================================
+# METHOD 1 — OTSU
+# ============================================================
 
-for image_path in image_files:
+def otsu_segmentation(image, roi_mask):
 
-    ground_truth_path = (
-        ground_truth_folder
-        / f"{image_path.stem}_mask.png"
+    gray = cv2.cvtColor(
+        image,
+        cv2.COLOR_BGR2GRAY
     )
 
-    # Skip images without ground truth
-    if not ground_truth_path.exists():
-        continue
+    # Only fruit pixels
+    fruit_pixels = gray[roi_mask > 0]
 
-    image = cv2.imread(str(image_path))
+    if len(fruit_pixels) == 0:
+        return np.zeros_like(gray)
 
-    ground_truth = cv2.imread(
-        str(ground_truth_path),
+    # Calculate Otsu threshold using fruit ROI
+    threshold, _ = cv2.threshold(
+        fruit_pixels,
+        0,
+        255,
+        cv2.THRESH_BINARY + cv2.THRESH_OTSU
+    )
+
+    # Darker pixels considered possible blemishes
+    blemish_mask = np.zeros_like(gray)
+
+    blemish_mask[
+        (gray < threshold) &
+        (roi_mask > 0)
+    ] = 255
+
+    return blemish_mask
+
+
+# ============================================================
+# METHOD 2 — ADAPTIVE THRESHOLDING
+# ============================================================
+
+def adaptive_segmentation(image, roi_mask):
+
+    gray = cv2.cvtColor(
+        image,
+        cv2.COLOR_BGR2GRAY
+    )
+
+    adaptive = cv2.adaptiveThreshold(
+        gray,
+        255,
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY_INV,
+        31,
+        5
+    )
+
+    # Keep only fruit region
+    adaptive[roi_mask == 0] = 0
+
+    return adaptive
+
+
+# ============================================================
+# METHOD 3 — HSV COLOUR-BASED SEGMENTATION
+# ============================================================
+
+def hsv_segmentation(image, roi_mask):
+
+    # Convert processed image from BGR to HSV
+    hsv = cv2.cvtColor(
+        image,
+        cv2.COLOR_BGR2HSV
+    ).astype(np.float32)
+
+    # Extract only fruit pixels
+    fruit_pixels = hsv[roi_mask > 0]
+
+    if len(fruit_pixels) == 0:
+        return np.zeros(
+            roi_mask.shape,
+            dtype=np.uint8
+        )
+
+    # --------------------------------------------------------
+    # FIND REPRESENTATIVE FRUIT COLOUR
+    # --------------------------------------------------------
+    # Median is more robust than mean when blemishes exist.
+
+    median_h = np.median(fruit_pixels[:, 0])
+    median_s = np.median(fruit_pixels[:, 1])
+    median_v = np.median(fruit_pixels[:, 2])
+
+
+    # --------------------------------------------------------
+    # HSV DIFFERENCE
+    # --------------------------------------------------------
+
+    h = hsv[:, :, 0]
+    s = hsv[:, :, 1]
+    v = hsv[:, :, 2]
+
+    # Hue is circular in OpenCV:
+    # 0 and 179 represent very similar colours.
+    hue_difference = np.abs(
+        h - median_h
+    )
+
+    hue_difference = np.minimum(
+        hue_difference,
+        180 - hue_difference
+    )
+
+    saturation_difference = np.abs(
+        s - median_s
+    )
+
+    value_difference = np.abs(
+        v - median_v
+    )
+
+
+    # --------------------------------------------------------
+    # NORMALISE HSV DIFFERENCES
+    # --------------------------------------------------------
+
+    hue_difference = (
+        hue_difference / 90.0
+    )
+
+    saturation_difference = (
+        saturation_difference / 255.0
+    )
+
+    value_difference = (
+        value_difference / 255.0
+    )
+
+
+    # --------------------------------------------------------
+    # COMBINED HSV COLOUR DIFFERENCE
+    # --------------------------------------------------------
+
+    hsv_difference = np.sqrt(
+        hue_difference ** 2
+        + saturation_difference ** 2
+        + value_difference ** 2
+    )
+
+
+    # --------------------------------------------------------
+    # AUTOMATIC THRESHOLD FROM FRUIT ROI
+    # --------------------------------------------------------
+
+    roi_difference = hsv_difference[
+        roi_mask > 0
+    ]
+
+    threshold = (
+        np.mean(roi_difference)
+        + np.std(roi_difference)
+    )
+
+
+    # --------------------------------------------------------
+    # CREATE BLEMISH MASK
+    # --------------------------------------------------------
+
+    blemish_mask = np.zeros(
+        roi_mask.shape,
+        dtype=np.uint8
+    )
+
+    blemish_mask[
+        (hsv_difference > threshold)
+        & (roi_mask > 0)
+    ] = 255
+
+    return blemish_mask
+
+
+# ============================================================
+# DAMAGE PERCENTAGE
+# ============================================================
+
+def calculate_damage(mask, roi_mask):
+
+    fruit_pixels = np.count_nonzero(
+        roi_mask
+    )
+
+    blemish_pixels = np.count_nonzero(
+        mask
+    )
+
+    if fruit_pixels == 0:
+        return 0.0
+
+    return (
+        blemish_pixels
+        / fruit_pixels
+    ) * 100
+
+
+# ============================================================
+# VISUALISATION
+# ============================================================
+
+def create_visual(
+    image,
+    roi,
+    otsu,
+    adaptive,
+    hsv,
+    fruit,
+    category,
+    image_name
+):
+
+    # --------------------------------------------------------
+    # CONVERT MASKS TO BGR
+    # --------------------------------------------------------
+
+    roi_display = cv2.cvtColor(
+        roi,
+        cv2.COLOR_GRAY2BGR
+    )
+
+    otsu_display = cv2.cvtColor(
+        otsu,
+        cv2.COLOR_GRAY2BGR
+    )
+
+    adaptive_display = cv2.cvtColor(
+        adaptive,
+        cv2.COLOR_GRAY2BGR
+    )
+
+    hsv_display = cv2.cvtColor(
+        hsv,
+        cv2.COLOR_GRAY2BGR
+    )
+
+
+    # --------------------------------------------------------
+    # SETTINGS FOR LABELS
+    # --------------------------------------------------------
+
+    label_height = 55
+
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    font_scale = 0.75
+    font_thickness = 2
+
+    text_colour = (0, 0, 0)
+    background_colour = (255, 255, 255)
+
+
+    # --------------------------------------------------------
+    # FUNCTION TO ADD TITLE ABOVE AN IMAGE
+    # --------------------------------------------------------
+
+    def add_label(img, label):
+
+        height, width = img.shape[:2]
+
+        label_area = np.full(
+            (label_height, width, 3),
+            background_colour,
+            dtype=np.uint8
+        )
+
+        text_size = cv2.getTextSize(
+            label,
+            font,
+            font_scale,
+            font_thickness
+        )[0]
+
+        text_x = max(
+            10,
+            (width - text_size[0]) // 2
+        )
+
+        text_y = (
+            label_height + text_size[1]
+        ) // 2
+
+        cv2.putText(
+            label_area,
+            label,
+            (text_x, text_y),
+            font,
+            font_scale,
+            text_colour,
+            font_thickness,
+            cv2.LINE_AA
+        )
+
+        return np.vstack([
+            label_area,
+            img
+        ])
+
+
+    # --------------------------------------------------------
+    # ADD METHOD NAMES
+    # --------------------------------------------------------
+
+    image_panel = add_label(
+        image,
+        "Processed Image"
+    )
+
+    roi_panel = add_label(
+        roi_display,
+        "Fruit ROI Mask"
+    )
+
+    otsu_panel = add_label(
+        otsu_display,
+        "Method 1 - Otsu Thresholding"
+    )
+
+    adaptive_panel = add_label(
+        adaptive_display,
+        "Method 2 - Adaptive Thresholding"
+    )
+
+    hsv_panel = add_label(
+        hsv_display,
+        "Method 3 - HSV Colour Segmentation"
+    )
+
+
+    # --------------------------------------------------------
+    # CREATE BLANK PANEL
+    # --------------------------------------------------------
+
+    blank = np.zeros_like(
+        hsv_display
+    )
+
+    blank_panel = add_label(
+        blank,
+        ""
+    )
+
+
+    # --------------------------------------------------------
+    # CREATE ROWS
+    # --------------------------------------------------------
+
+    top = np.hstack([
+        image_panel,
+        roi_panel
+    ])
+
+    middle = np.hstack([
+        otsu_panel,
+        adaptive_panel
+    ])
+
+    bottom = np.hstack([
+        hsv_panel,
+        blank_panel
+    ])
+
+
+    # --------------------------------------------------------
+    # COMBINE ALL ROWS
+    # --------------------------------------------------------
+
+    comparison = np.vstack([
+        top,
+        middle,
+        bottom
+    ])
+
+
+    # --------------------------------------------------------
+    # ADD MAIN TITLE
+    # --------------------------------------------------------
+
+    title_height = 65
+
+    title_area = np.full(
+        (
+            title_height,
+            comparison.shape[1],
+            3
+        ),
+        255,
+        dtype=np.uint8
+    )
+
+    main_title = (
+        f"{fruit} | {category} | {image_name}"
+    )
+
+    title_font_scale = 0.9
+    title_thickness = 2
+
+    title_size = cv2.getTextSize(
+        main_title,
+        font,
+        title_font_scale,
+        title_thickness
+    )[0]
+
+    title_x = max(
+        10,
+        (
+            comparison.shape[1]
+            - title_size[0]
+        ) // 2
+    )
+
+    title_y = (
+        title_height
+        + title_size[1]
+    ) // 2
+
+    cv2.putText(
+        title_area,
+        main_title,
+        (title_x, title_y),
+        font,
+        title_font_scale,
+        (0, 0, 0),
+        title_thickness,
+        cv2.LINE_AA
+    )
+
+    comparison = np.vstack([
+        title_area,
+        comparison
+    ])
+
+
+    # --------------------------------------------------------
+    # OUTPUT FOLDER
+    # --------------------------------------------------------
+
+    output_folder = os.path.join(
+        OUTPUT_ROOT,
+        fruit,
+        category
+    )
+
+    os.makedirs(
+        output_folder,
+        exist_ok=True
+    )
+
+
+    # --------------------------------------------------------
+    # SAVE IMAGE
+    # --------------------------------------------------------
+
+    output_path = os.path.join(
+        output_folder,
+        image_name
+    )
+
+    cv2.imwrite(
+        output_path,
+        comparison
+    )
+
+
+# ============================================================
+# TEST SMALL SAMPLE
+# ============================================================
+
+# 3 images from every fruit
+# Select samples from every fruit AND category
+sample_list = []
+
+# Select 2 random images from each fruit + category combination
+for (fruit, category), group in df.groupby(["fruit", "category"]):
+
+    n_samples = min(2, len(group))
+
+    selected = group.sample(
+        n=n_samples,
+        random_state=42
+    )
+
+    sample_list.append(selected)
+
+# Combine all selected samples
+sample_df = pd.concat(
+    sample_list,
+    ignore_index=True
+)
+
+
+print("\n==========================================")
+print("MEMBER 4 - METHOD COMPARISON TEST")
+print("==========================================")
+
+print(
+    f"Testing {len(sample_df)} images..."
+)
+
+
+for _, row in sample_df.iterrows():
+
+    relative_path = row["relative_path"]
+
+    image_path = os.path.join(
+        PROCESSED_ROOT,
+        relative_path
+    )
+
+    relative_folder = os.path.dirname(
+        relative_path
+    )
+
+    filename = os.path.basename(
+        relative_path
+    )
+
+    filename_without_extension = os.path.splitext(
+        filename
+    )[0]
+
+    mask_path = os.path.join(
+        MASK_ROOT,
+        relative_folder,
+        filename_without_extension + "_mask.png"
+    )
+
+    image = cv2.imread(
+        image_path
+    )
+
+    roi_mask = cv2.imread(
+        mask_path,
         cv2.IMREAD_GRAYSCALE
     )
 
-    if image is None or ground_truth is None:
-        print("Could not load:", image_path.name)
+    if image is None or roi_mask is None:
+
+        print(
+            f"SKIPPED: {relative_path}"
+        )
+
         continue
 
-    # Same size used during annotation
-    image = cv2.resize(
+
+    # --------------------------------------------------------
+    # RUN THREE METHODS
+    # --------------------------------------------------------
+
+    otsu_mask = otsu_segmentation(
         image,
-        (600, 600)
+        roi_mask
     )
 
-    ground_truth = cv2.resize(
-        ground_truth,
-        (600, 600),
-        interpolation=cv2.INTER_NEAREST
+    adaptive_mask = adaptive_segmentation(
+        image,
+        roi_mask
     )
 
-    # --------------------------------------------------
-    # Banana ROI
-    # --------------------------------------------------
-
-    banana_mask = create_banana_mask(image)
-
-    # --------------------------------------------------
-    # Run segmentation methods
-    # --------------------------------------------------
-
-    masks = {
-        "Otsu": otsu_segmentation(
-            image,
-            banana_mask
-        ),
-
-        "Adaptive": adaptive_segmentation(
-            image,
-            banana_mask
-        ),
-
-        "Colour-Based": colour_segmentation(
-            image,
-            banana_mask
-        )
-    }
-
-    # --------------------------------------------------
-    # Evaluate each method
-    # --------------------------------------------------
-
-    print("\n================================")
-    print("Image:", image_path.name)
-    print("================================")
-
-    for method_name, predicted_mask in masks.items():
-
-        metrics = calculate_metrics(
-            predicted_mask,
-            ground_truth
-        )
-
-        print(f"\n{method_name}")
-
-        for metric_name, value in metrics.items():
-            print(f"{metric_name}: {value:.4f}")
-
-        # Save individual result
-        all_results.append({
-            "Image": image_path.name,
-            "Method": method_name,
-            "IoU": metrics["IoU"],
-            "Dice": metrics["Dice"],
-            "Precision": metrics["Precision"],
-            "Recall": metrics["Recall"]
-        })
-
-        # Add to totals
-        for metric_name in method_totals[method_name]:
-            method_totals[method_name][metric_name] += (
-                metrics[metric_name]
-            )
-
-        method_counts[method_name] += 1
+    hsv_mask = hsv_segmentation(
+        image,
+        roi_mask
+    )
 
 
-# --------------------------------------------------
-# Make sure at least one image was evaluated
-# --------------------------------------------------
+    # --------------------------------------------------------
+    # DAMAGE %
+    # --------------------------------------------------------
 
-if not all_results:
-    print("\nNo annotated images were found.")
+    otsu_percentage = calculate_damage(
+        otsu_mask,
+        roi_mask
+    )
+
+    adaptive_percentage = calculate_damage(
+        adaptive_mask,
+        roi_mask
+    )
+
+    hsv_percentage = calculate_damage(
+        hsv_mask,
+        roi_mask
+    )
+
+
     print(
-        "Make sure your masks are inside:",
-        ground_truth_folder
-    )
-    exit()
-
-
-# --------------------------------------------------
-# Calculate averages
-# --------------------------------------------------
-
-average_results = {}
-
-for method_name, totals in method_totals.items():
-
-    count = method_counts[method_name]
-
-    average_results[method_name] = {}
-
-    for metric_name, total in totals.items():
-
-        if count > 0:
-            average = total / count
-        else:
-            average = 0
-
-        average_results[method_name][metric_name] = average
-
-
-# --------------------------------------------------
-# Print average results
-# --------------------------------------------------
-
-print("\n")
-print("========================================")
-print("AVERAGE RESULTS")
-print("========================================")
-
-for method_name, metrics in average_results.items():
-
-    print(f"\n{method_name}")
-
-    for metric_name, value in metrics.items():
-        print(f"{metric_name}: {value:.4f}")
-
-
-# --------------------------------------------------
-# Save results to CSV
-# --------------------------------------------------
-
-with open(
-    csv_path,
-    "w",
-    newline="",
-    encoding="utf-8"
-) as csv_file:
-
-    fieldnames = [
-        "Image",
-        "Method",
-        "IoU",
-        "Dice",
-        "Precision",
-        "Recall"
-    ]
-
-    writer = csv.DictWriter(
-        csv_file,
-        fieldnames=fieldnames
+        f"\n{row['fruit']} | "
+        f"{row['category']} | "
+        f"{filename}"
     )
 
-    writer.writeheader()
+    print(
+        f"  Otsu     : "
+        f"{otsu_percentage:.2f}%"
+    )
 
-    # Individual image results
-    for result in all_results:
+    print(
+        f"  Adaptive : "
+        f"{adaptive_percentage:.2f}%"
+    )
 
-        writer.writerow({
-            "Image": result["Image"],
-            "Method": result["Method"],
-            "IoU": f"{result['IoU']:.4f}",
-            "Dice": f"{result['Dice']:.4f}",
-            "Precision": f"{result['Precision']:.4f}",
-            "Recall": f"{result['Recall']:.4f}"
-        })
-
-    # Blank row
-    writer.writerow({})
-
-    # Average results
-    for method_name, metrics in average_results.items():
-
-        writer.writerow({
-            "Image": "AVERAGE",
-            "Method": method_name,
-            "IoU": f"{metrics['IoU']:.4f}",
-            "Dice": f"{metrics['Dice']:.4f}",
-            "Precision": f"{metrics['Precision']:.4f}",
-            "Recall": f"{metrics['Recall']:.4f}"
-        })
+    print(
+        f"  HSV      : "
+        f"{hsv_percentage:.2f}%"
+    )
 
 
-print("\n========================================")
-print("Results saved successfully!")
-print("CSV:", csv_path)
-print("========================================")
+    # --------------------------------------------------------
+    # SAVE VISUAL COMPARISON
+    # --------------------------------------------------------
+
+    create_visual(
+        image,
+        roi_mask,
+        otsu_mask,
+        adaptive_mask,
+        hsv_mask,
+        row["fruit"],
+        row["category"],
+        filename_without_extension + ".jpg"
+    )
+
+
+print("\n==========================================")
+print("TEST COMPLETED")
+print("==========================================")
+
+print(
+    f"Results saved to: {OUTPUT_ROOT}"
+)

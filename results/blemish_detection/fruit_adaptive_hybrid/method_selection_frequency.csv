@@ -1,0 +1,20 @@
+fruit,selected_method,selection_count
+Apple,FABR_A,1
+Apple,Otsu + Morphology 7x7,2
+Banana,FABR_C,2
+Banana,FABR_D,1
+Grape,FABR_D,1
+Grape,Otsu + Morphology 7x7,2
+Guava,FABR_B,2
+Guava,FABR_D,1
+Mango,FABR_C,1
+Mango,Original Otsu,1
+Mango,Otsu + Morphology 7x7,1
+Melon,FABR_A,1
+Melon,Otsu + Morphology 7x7,2
+Orange,Original Otsu,1
+Orange,Otsu + Morphology 7x7,2
+Peach,FABR_A,1
+Peach,FABR_E,1
+Peach,Otsu + Morphology 7x7,1
+Pear,FABR_C,3
